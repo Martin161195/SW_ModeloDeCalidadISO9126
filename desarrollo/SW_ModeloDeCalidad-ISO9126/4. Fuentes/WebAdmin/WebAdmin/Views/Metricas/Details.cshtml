@@ -1,0 +1,36 @@
+﻿@model WebAdmin.Models.Metrica
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Detalles</h2>
+
+<div>
+    <h4>Metrica</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Nombre)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Nombre)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.IdCaracteristicaNavigation)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.IdCaracteristicaNavigation.Nombre)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.IdSubcaracteristicaNavigation)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.IdSubcaracteristicaNavigation.Nombre)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.IdMetrica">Editar</a> |
+    <a asp-action="Index">Ir a Listado</a>
+</div>
