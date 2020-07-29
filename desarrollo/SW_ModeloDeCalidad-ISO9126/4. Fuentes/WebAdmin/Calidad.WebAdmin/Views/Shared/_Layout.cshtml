@@ -1,0 +1,100 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Calidad.WebAdmin</title>
+    <link href="~/lib/feather/style.min.css" rel="stylesheet" />
+    <link href="~/lib/line-awesome/css/line-awesome.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link href="~/css/all-in-one.css" rel="stylesheet" />
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body class="vertical-layout vertical-menu 2-column menu-expanded fixed-navbar"
+      data-open="click" data-menu="vertical-menu" data-col="2-columns">
+    <nav role="navigation" class="header-navbar navbar navbar-with-menu navbar-expand-md fixed-top navbar-semi-dark navbar-shadow navbar-border">
+        <div class="navbar-wrapper">
+            <div class="navbar-header">
+
+            </div>
+            <div class="navbar-container content">
+                <div class="collapse navbar-collapse" id="navbar-mobile">
+                    <ul class="nav navbar-nav mr-auto">
+                        <li class="nav-item d-none d-md-block">
+                            <a class="nav-link nav-menu-main menu-toggle">
+                                <i class="ft-menu"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div id="main-menu" data-scroll-to-active="true" class="main-menu menu-light menu-fixed menu-shadow menu-accordion">
+        <!-- main menu header-->
+        <div class="main-menu-header">
+            <input type="text" placeholder="Search" class="menu-search form-control round" />
+        </div>
+        <!-- / main menu header-->
+        <!-- main menu content-->
+        <div class="main-menu-content">
+            <ul id="main-menu-navigation" data-menu="menu-navigation" class="navigation navigation-main">
+                <li class="active">
+                    <a href="index.html"><i class="ft-camera-off"></i><span class="menu-title" data-i18n="">Modern Admin</span></a>
+                </li>
+                <li class=" nav-item">
+                    <a href="documentation-introduction.html"><i class="ft-align-justify"></i><span class="menu-title" data-i18n="">Introduction</span></a>
+                </li>
+                <li class=" nav-item">
+                    <a href="documentation-folder-structure.html"><i class="ft-folder"></i><span class="menu-title" data-i18n="">Folder Structure</span></a>
+                </li>
+                <li class=" nav-item">
+                    <a href="#"><i class="ft-settings"></i><span class="menu-title" data-i18n="">Building Tools</span></a>
+                    <ul class="menu-content">
+                        <li>
+                            <a class="menu-item" href="documentation-grunt.html">Grunt</a>
+                        </li>
+                        <li>
+                            <a class="menu-item" href="documentation-gulp.html">Gulp</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <!-- /main menu content-->
+        <!-- main menu footer-->
+        <div class="main-menu-footer footer-close">
+            <div class="text-center">V.2.0.1</div>
+        </div>
+        <!-- main menu footer-->
+    </div>
+    <!-- BEGIN Content-->
+    <div class="content modern-content container-fluid">
+        <div class="content-wrapper">
+            <!-- content header-->
+            <div class="content-header row">
+                ...
+            </div>
+            <!-- content header-->
+            <!-- content body-->
+            <div class="content-body">
+                @RenderBody()
+            </div>
+            <!-- content body-->
+
+        </div>
+    </div>
+    <!-- START FOOTER DARK-->
+    <footer class="footer footer-dark">
+        ...
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/vendor.js"></script>
+    <script src="~/lib/modern-admin/js/app-menu.js"></script>
+    <script src="~/lib/modern-admin/js/app.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    @RenderSection("Scripts", required: false)
+</body>
+</html>
