@@ -1,0 +1,102 @@
+E:\Proyectos\CALIDAD\CalidadAdmin\Calidad\WebAdmin\bin\Debug\netcoreapp2.1\appsettings.Development.json
+E:\Proyectos\CALIDAD\CalidadAdmin\Calidad\WebAdmin\bin\Debug\netcoreapp2.1\appsettings.json
+E:\Proyectos\CALIDAD\CalidadAdmin\Calidad\WebAdmin\bin\Debug\netcoreapp2.1\Properties\launchSettings.json
+E:\Proyectos\CALIDAD\CalidadAdmin\Calidad\WebAdmin\bin\Debug\netcoreapp2.1\WebAdmin.deps.json
+E:\Proyectos\CALIDAD\CalidadAdmin\Calidad\WebAdmin\bin\Debug\netcoreapp2.1\WebAdmin.runtimeconfig.json
+E:\Proyectos\CALIDAD\CalidadAdmin\Calidad\WebAdmin\bin\Debug\netcoreapp2.1\WebAdmin.runtimeconfig.dev.json
+E:\Proyectos\CALIDAD\CalidadAdmin\Calidad\WebAdmin\bin\Debug\netcoreapp2.1\WebAdmin.dll
+E:\Proyectos\CALIDAD\CalidadAdmin\Calidad\WebAdmin\obj\Debug\netcoreapp2.1\WebAdmin.csprojAssemblyReference.cache
+E:\Proyectos\CALIDAD\CalidadAdmin\Calidad\WebAdmin\obj\Debug\netcoreapp2.1\WebAdmin.AssemblyInfoInputs.cache
+E:\Proyectos\CALIDAD\CalidadAdmin\Calidad\WebAdmin\obj\Debug\netcoreapp2.1\WebAdmin.AssemblyInfo.cs
+E:\Proyectos\CALIDAD\CalidadAdmin\Calidad\WebAdmin\obj\Debug\netcoreapp2.1\WebAdmin.RazorAssemblyInfo.cache
+E:\Proyectos\CALIDAD\CalidadAdmin\Calidad\WebAdmin\obj\Debug\netcoreapp2.1\WebAdmin.RazorAssemblyInfo.cs
+E:\Proyectos\CALIDAD\CalidadAdmin\Calidad\WebAdmin\obj\Debug\netcoreapp2.1\WebAdmin.TagHelpers.input.cache
+E:\Proyectos\CALIDAD\CalidadAdmin\Calidad\WebAdmin\obj\Debug\netcoreapp2.1\WebAdmin.TagHelpers.output.cache
+E:\Proyectos\CALIDAD\CalidadAdmin\Calidad\WebAdmin\obj\Debug\netcoreapp2.1\WebAdmin.RazorCoreGenerate.cache
+E:\Proyectos\CALIDAD\CalidadAdmin\Calidad\WebAdmin\obj\Debug\netcoreapp2.1\Razor\Views\Home\About.cshtml.g.cs
+E:\Proyectos\CALIDAD\CalidadAdmin\Calidad\WebAdmin\obj\Debug\netcoreapp2.1\Razor\Views\Home\Contact.cshtml.g.cs
+E:\Proyectos\CALIDAD\CalidadAdmin\Calidad\WebAdmin\obj\Debug\netcoreapp2.1\Razor\Views\Home\Index.cshtml.g.cs
+E:\Proyectos\CALIDAD\CalidadAdmin\Calidad\WebAdmin\obj\Debug\netcoreapp2.1\Razor\Views\Home\Privacy.cshtml.g.cs
+E:\Proyectos\CALIDAD\CalidadAdmin\Calidad\WebAdmin\obj\Debug\netcoreapp2.1\Razor\Views\Shared\Error.cshtml.g.cs
+E:\Proyectos\CALIDAD\CalidadAdmin\Calidad\WebAdmin\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_CookieConsentPartial.cshtml.g.cs
+E:\Proyectos\CALIDAD\CalidadAdmin\Calidad\WebAdmin\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_Layout.cshtml.g.cs
+E:\Proyectos\CALIDAD\CalidadAdmin\Calidad\WebAdmin\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
+E:\Proyectos\CALIDAD\CalidadAdmin\Calidad\WebAdmin\obj\Debug\netcoreapp2.1\Razor\Views\_ViewImports.cshtml.g.cs
+E:\Proyectos\CALIDAD\CalidadAdmin\Calidad\WebAdmin\obj\Debug\netcoreapp2.1\Razor\Views\_ViewStart.cshtml.g.cs
+E:\Proyectos\CALIDAD\CalidadAdmin\Calidad\WebAdmin\obj\Debug\netcoreapp2.1\WebAdmin.RazorTargetAssemblyInfo.cache
+E:\Proyectos\CALIDAD\CalidadAdmin\Calidad\WebAdmin\obj\Debug\netcoreapp2.1\WebAdmin.RazorTargetAssemblyInfo.cs
+E:\Proyectos\CALIDAD\CalidadAdmin\Calidad\WebAdmin\obj\Debug\netcoreapp2.1\WebAdmin.genruntimeconfig.cache
+E:\Proyectos\CALIDAD\CalidadAdmin\Calidad\WebAdmin\bin\Debug\netcoreapp2.1\WebAdmin.pdb
+E:\Proyectos\CALIDAD\CalidadAdmin\Calidad\WebAdmin\bin\Debug\netcoreapp2.1\WebAdmin.Views.dll
+E:\Proyectos\CALIDAD\CalidadAdmin\Calidad\WebAdmin\bin\Debug\netcoreapp2.1\WebAdmin.Views.pdb
+E:\Proyectos\CALIDAD\CalidadAdmin\Calidad\WebAdmin\obj\Debug\netcoreapp2.1\WebAdmin.Views.pdb
+E:\Proyectos\CALIDAD\CalidadAdmin\Calidad\WebAdmin\obj\Debug\netcoreapp2.1\WebAdmin.dll
+E:\Proyectos\CALIDAD\CalidadAdmin\Calidad\WebAdmin\obj\Debug\netcoreapp2.1\WebAdmin.pdb
+E:\Proyectos\CALIDAD\CalidadAdmin\Calidad\WebAdmin\obj\Debug\netcoreapp2.1\WebAdmin.csproj.CopyComplete
+E:\Proyectos\CALIDAD\CalidadAdmin\Calidad\WebAdmin\obj\Debug\netcoreapp2.1\WebAdmin.csproj.CoreCompileInputs.cache
+E:\Proyectos\CALIDAD\CalidadAdmin\Calidad\WebAdmin\obj\Debug\netcoreapp2.1\Razor\Views\Caracteristicas\Create.cshtml.g.cs
+E:\Proyectos\CALIDAD\CalidadAdmin\Calidad\WebAdmin\obj\Debug\netcoreapp2.1\Razor\Views\Caracteristicas\Delete.cshtml.g.cs
+E:\Proyectos\CALIDAD\CalidadAdmin\Calidad\WebAdmin\obj\Debug\netcoreapp2.1\Razor\Views\Caracteristicas\Details.cshtml.g.cs
+E:\Proyectos\CALIDAD\CalidadAdmin\Calidad\WebAdmin\obj\Debug\netcoreapp2.1\Razor\Views\Caracteristicas\Edit.cshtml.g.cs
+E:\Proyectos\CALIDAD\CalidadAdmin\Calidad\WebAdmin\obj\Debug\netcoreapp2.1\Razor\Views\Caracteristicas\Index.cshtml.g.cs
+E:\Proyectos\CALIDAD\CalidadAdmin\Calidad\WebAdmin\obj\Debug\netcoreapp2.1\Razor\Views\Subcaracteristicas\Create.cshtml.g.cs
+E:\Proyectos\CALIDAD\CalidadAdmin\Calidad\WebAdmin\obj\Debug\netcoreapp2.1\Razor\Views\Subcaracteristicas\Delete.cshtml.g.cs
+E:\Proyectos\CALIDAD\CalidadAdmin\Calidad\WebAdmin\obj\Debug\netcoreapp2.1\Razor\Views\Subcaracteristicas\Details.cshtml.g.cs
+E:\Proyectos\CALIDAD\CalidadAdmin\Calidad\WebAdmin\obj\Debug\netcoreapp2.1\Razor\Views\Subcaracteristicas\Edit.cshtml.g.cs
+E:\Proyectos\CALIDAD\CalidadAdmin\Calidad\WebAdmin\obj\Debug\netcoreapp2.1\Razor\Views\Subcaracteristicas\Index.cshtml.g.cs
+E:\Proyectos\CALIDAD\CalidadAdmin\Calidad\WebAdmin\obj\Debug\netcoreapp2.1\Razor\Views\Metricas\Create.cshtml.g.cs
+E:\Proyectos\CALIDAD\CalidadAdmin\Calidad\WebAdmin\obj\Debug\netcoreapp2.1\Razor\Views\Metricas\Delete.cshtml.g.cs
+E:\Proyectos\CALIDAD\CalidadAdmin\Calidad\WebAdmin\obj\Debug\netcoreapp2.1\Razor\Views\Metricas\Details.cshtml.g.cs
+E:\Proyectos\CALIDAD\CalidadAdmin\Calidad\WebAdmin\obj\Debug\netcoreapp2.1\Razor\Views\Metricas\Edit.cshtml.g.cs
+E:\Proyectos\CALIDAD\CalidadAdmin\Calidad\WebAdmin\obj\Debug\netcoreapp2.1\Razor\Views\Metricas\Index.cshtml.g.cs
+E:\Proyectos\CALIDAD\CalidadAdmin\Git\desarrollo\SW_ModeloDeCalidad-ISO9126\4. Fuentes\WebAdmin\WebAdmin\bin\Debug\netcoreapp2.1\appsettings.Development.json
+E:\Proyectos\CALIDAD\CalidadAdmin\Git\desarrollo\SW_ModeloDeCalidad-ISO9126\4. Fuentes\WebAdmin\WebAdmin\bin\Debug\netcoreapp2.1\appsettings.json
+E:\Proyectos\CALIDAD\CalidadAdmin\Git\desarrollo\SW_ModeloDeCalidad-ISO9126\4. Fuentes\WebAdmin\WebAdmin\bin\Debug\netcoreapp2.1\Properties\launchSettings.json
+E:\Proyectos\CALIDAD\CalidadAdmin\Git\desarrollo\SW_ModeloDeCalidad-ISO9126\4. Fuentes\WebAdmin\WebAdmin\bin\Debug\netcoreapp2.1\WebAdmin.deps.json
+E:\Proyectos\CALIDAD\CalidadAdmin\Git\desarrollo\SW_ModeloDeCalidad-ISO9126\4. Fuentes\WebAdmin\WebAdmin\bin\Debug\netcoreapp2.1\WebAdmin.runtimeconfig.json
+E:\Proyectos\CALIDAD\CalidadAdmin\Git\desarrollo\SW_ModeloDeCalidad-ISO9126\4. Fuentes\WebAdmin\WebAdmin\bin\Debug\netcoreapp2.1\WebAdmin.runtimeconfig.dev.json
+E:\Proyectos\CALIDAD\CalidadAdmin\Git\desarrollo\SW_ModeloDeCalidad-ISO9126\4. Fuentes\WebAdmin\WebAdmin\bin\Debug\netcoreapp2.1\WebAdmin.dll
+E:\Proyectos\CALIDAD\CalidadAdmin\Git\desarrollo\SW_ModeloDeCalidad-ISO9126\4. Fuentes\WebAdmin\WebAdmin\bin\Debug\netcoreapp2.1\WebAdmin.pdb
+E:\Proyectos\CALIDAD\CalidadAdmin\Git\desarrollo\SW_ModeloDeCalidad-ISO9126\4. Fuentes\WebAdmin\WebAdmin\bin\Debug\netcoreapp2.1\WebAdmin.Views.dll
+E:\Proyectos\CALIDAD\CalidadAdmin\Git\desarrollo\SW_ModeloDeCalidad-ISO9126\4. Fuentes\WebAdmin\WebAdmin\bin\Debug\netcoreapp2.1\WebAdmin.Views.pdb
+E:\Proyectos\CALIDAD\CalidadAdmin\Git\desarrollo\SW_ModeloDeCalidad-ISO9126\4. Fuentes\WebAdmin\WebAdmin\obj\Debug\netcoreapp2.1\WebAdmin.csprojAssemblyReference.cache
+E:\Proyectos\CALIDAD\CalidadAdmin\Git\desarrollo\SW_ModeloDeCalidad-ISO9126\4. Fuentes\WebAdmin\WebAdmin\obj\Debug\netcoreapp2.1\WebAdmin.AssemblyInfoInputs.cache
+E:\Proyectos\CALIDAD\CalidadAdmin\Git\desarrollo\SW_ModeloDeCalidad-ISO9126\4. Fuentes\WebAdmin\WebAdmin\obj\Debug\netcoreapp2.1\WebAdmin.AssemblyInfo.cs
+E:\Proyectos\CALIDAD\CalidadAdmin\Git\desarrollo\SW_ModeloDeCalidad-ISO9126\4. Fuentes\WebAdmin\WebAdmin\obj\Debug\netcoreapp2.1\WebAdmin.csproj.CoreCompileInputs.cache
+E:\Proyectos\CALIDAD\CalidadAdmin\Git\desarrollo\SW_ModeloDeCalidad-ISO9126\4. Fuentes\WebAdmin\WebAdmin\obj\Debug\netcoreapp2.1\WebAdmin.RazorAssemblyInfo.cache
+E:\Proyectos\CALIDAD\CalidadAdmin\Git\desarrollo\SW_ModeloDeCalidad-ISO9126\4. Fuentes\WebAdmin\WebAdmin\obj\Debug\netcoreapp2.1\WebAdmin.RazorAssemblyInfo.cs
+E:\Proyectos\CALIDAD\CalidadAdmin\Git\desarrollo\SW_ModeloDeCalidad-ISO9126\4. Fuentes\WebAdmin\WebAdmin\obj\Debug\netcoreapp2.1\WebAdmin.TagHelpers.input.cache
+E:\Proyectos\CALIDAD\CalidadAdmin\Git\desarrollo\SW_ModeloDeCalidad-ISO9126\4. Fuentes\WebAdmin\WebAdmin\obj\Debug\netcoreapp2.1\WebAdmin.TagHelpers.output.cache
+E:\Proyectos\CALIDAD\CalidadAdmin\Git\desarrollo\SW_ModeloDeCalidad-ISO9126\4. Fuentes\WebAdmin\WebAdmin\obj\Debug\netcoreapp2.1\WebAdmin.RazorCoreGenerate.cache
+E:\Proyectos\CALIDAD\CalidadAdmin\Git\desarrollo\SW_ModeloDeCalidad-ISO9126\4. Fuentes\WebAdmin\WebAdmin\obj\Debug\netcoreapp2.1\Razor\Views\Caracteristicas\Create.cshtml.g.cs
+E:\Proyectos\CALIDAD\CalidadAdmin\Git\desarrollo\SW_ModeloDeCalidad-ISO9126\4. Fuentes\WebAdmin\WebAdmin\obj\Debug\netcoreapp2.1\Razor\Views\Caracteristicas\Delete.cshtml.g.cs
+E:\Proyectos\CALIDAD\CalidadAdmin\Git\desarrollo\SW_ModeloDeCalidad-ISO9126\4. Fuentes\WebAdmin\WebAdmin\obj\Debug\netcoreapp2.1\Razor\Views\Caracteristicas\Details.cshtml.g.cs
+E:\Proyectos\CALIDAD\CalidadAdmin\Git\desarrollo\SW_ModeloDeCalidad-ISO9126\4. Fuentes\WebAdmin\WebAdmin\obj\Debug\netcoreapp2.1\Razor\Views\Caracteristicas\Edit.cshtml.g.cs
+E:\Proyectos\CALIDAD\CalidadAdmin\Git\desarrollo\SW_ModeloDeCalidad-ISO9126\4. Fuentes\WebAdmin\WebAdmin\obj\Debug\netcoreapp2.1\Razor\Views\Caracteristicas\Index.cshtml.g.cs
+E:\Proyectos\CALIDAD\CalidadAdmin\Git\desarrollo\SW_ModeloDeCalidad-ISO9126\4. Fuentes\WebAdmin\WebAdmin\obj\Debug\netcoreapp2.1\Razor\Views\Home\About.cshtml.g.cs
+E:\Proyectos\CALIDAD\CalidadAdmin\Git\desarrollo\SW_ModeloDeCalidad-ISO9126\4. Fuentes\WebAdmin\WebAdmin\obj\Debug\netcoreapp2.1\Razor\Views\Home\Contact.cshtml.g.cs
+E:\Proyectos\CALIDAD\CalidadAdmin\Git\desarrollo\SW_ModeloDeCalidad-ISO9126\4. Fuentes\WebAdmin\WebAdmin\obj\Debug\netcoreapp2.1\Razor\Views\Home\Index.cshtml.g.cs
+E:\Proyectos\CALIDAD\CalidadAdmin\Git\desarrollo\SW_ModeloDeCalidad-ISO9126\4. Fuentes\WebAdmin\WebAdmin\obj\Debug\netcoreapp2.1\Razor\Views\Home\Privacy.cshtml.g.cs
+E:\Proyectos\CALIDAD\CalidadAdmin\Git\desarrollo\SW_ModeloDeCalidad-ISO9126\4. Fuentes\WebAdmin\WebAdmin\obj\Debug\netcoreapp2.1\Razor\Views\Metricas\Create.cshtml.g.cs
+E:\Proyectos\CALIDAD\CalidadAdmin\Git\desarrollo\SW_ModeloDeCalidad-ISO9126\4. Fuentes\WebAdmin\WebAdmin\obj\Debug\netcoreapp2.1\Razor\Views\Metricas\Delete.cshtml.g.cs
+E:\Proyectos\CALIDAD\CalidadAdmin\Git\desarrollo\SW_ModeloDeCalidad-ISO9126\4. Fuentes\WebAdmin\WebAdmin\obj\Debug\netcoreapp2.1\Razor\Views\Metricas\Details.cshtml.g.cs
+E:\Proyectos\CALIDAD\CalidadAdmin\Git\desarrollo\SW_ModeloDeCalidad-ISO9126\4. Fuentes\WebAdmin\WebAdmin\obj\Debug\netcoreapp2.1\Razor\Views\Metricas\Edit.cshtml.g.cs
+E:\Proyectos\CALIDAD\CalidadAdmin\Git\desarrollo\SW_ModeloDeCalidad-ISO9126\4. Fuentes\WebAdmin\WebAdmin\obj\Debug\netcoreapp2.1\Razor\Views\Metricas\Index.cshtml.g.cs
+E:\Proyectos\CALIDAD\CalidadAdmin\Git\desarrollo\SW_ModeloDeCalidad-ISO9126\4. Fuentes\WebAdmin\WebAdmin\obj\Debug\netcoreapp2.1\Razor\Views\Shared\Error.cshtml.g.cs
+E:\Proyectos\CALIDAD\CalidadAdmin\Git\desarrollo\SW_ModeloDeCalidad-ISO9126\4. Fuentes\WebAdmin\WebAdmin\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_CookieConsentPartial.cshtml.g.cs
+E:\Proyectos\CALIDAD\CalidadAdmin\Git\desarrollo\SW_ModeloDeCalidad-ISO9126\4. Fuentes\WebAdmin\WebAdmin\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_Layout.cshtml.g.cs
+E:\Proyectos\CALIDAD\CalidadAdmin\Git\desarrollo\SW_ModeloDeCalidad-ISO9126\4. Fuentes\WebAdmin\WebAdmin\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
+E:\Proyectos\CALIDAD\CalidadAdmin\Git\desarrollo\SW_ModeloDeCalidad-ISO9126\4. Fuentes\WebAdmin\WebAdmin\obj\Debug\netcoreapp2.1\Razor\Views\Subcaracteristicas\Create.cshtml.g.cs
+E:\Proyectos\CALIDAD\CalidadAdmin\Git\desarrollo\SW_ModeloDeCalidad-ISO9126\4. Fuentes\WebAdmin\WebAdmin\obj\Debug\netcoreapp2.1\Razor\Views\Subcaracteristicas\Delete.cshtml.g.cs
+E:\Proyectos\CALIDAD\CalidadAdmin\Git\desarrollo\SW_ModeloDeCalidad-ISO9126\4. Fuentes\WebAdmin\WebAdmin\obj\Debug\netcoreapp2.1\Razor\Views\Subcaracteristicas\Details.cshtml.g.cs
+E:\Proyectos\CALIDAD\CalidadAdmin\Git\desarrollo\SW_ModeloDeCalidad-ISO9126\4. Fuentes\WebAdmin\WebAdmin\obj\Debug\netcoreapp2.1\Razor\Views\Subcaracteristicas\Edit.cshtml.g.cs
+E:\Proyectos\CALIDAD\CalidadAdmin\Git\desarrollo\SW_ModeloDeCalidad-ISO9126\4. Fuentes\WebAdmin\WebAdmin\obj\Debug\netcoreapp2.1\Razor\Views\Subcaracteristicas\Index.cshtml.g.cs
+E:\Proyectos\CALIDAD\CalidadAdmin\Git\desarrollo\SW_ModeloDeCalidad-ISO9126\4. Fuentes\WebAdmin\WebAdmin\obj\Debug\netcoreapp2.1\Razor\Views\_ViewImports.cshtml.g.cs
+E:\Proyectos\CALIDAD\CalidadAdmin\Git\desarrollo\SW_ModeloDeCalidad-ISO9126\4. Fuentes\WebAdmin\WebAdmin\obj\Debug\netcoreapp2.1\Razor\Views\_ViewStart.cshtml.g.cs
+E:\Proyectos\CALIDAD\CalidadAdmin\Git\desarrollo\SW_ModeloDeCalidad-ISO9126\4. Fuentes\WebAdmin\WebAdmin\obj\Debug\netcoreapp2.1\WebAdmin.RazorTargetAssemblyInfo.cache
+E:\Proyectos\CALIDAD\CalidadAdmin\Git\desarrollo\SW_ModeloDeCalidad-ISO9126\4. Fuentes\WebAdmin\WebAdmin\obj\Debug\netcoreapp2.1\WebAdmin.RazorTargetAssemblyInfo.cs
+E:\Proyectos\CALIDAD\CalidadAdmin\Git\desarrollo\SW_ModeloDeCalidad-ISO9126\4. Fuentes\WebAdmin\WebAdmin\obj\Debug\netcoreapp2.1\WebAdmin.Views.pdb
+E:\Proyectos\CALIDAD\CalidadAdmin\Git\desarrollo\SW_ModeloDeCalidad-ISO9126\4. Fuentes\WebAdmin\WebAdmin\obj\Debug\netcoreapp2.1\WebAdmin.dll
+E:\Proyectos\CALIDAD\CalidadAdmin\Git\desarrollo\SW_ModeloDeCalidad-ISO9126\4. Fuentes\WebAdmin\WebAdmin\obj\Debug\netcoreapp2.1\WebAdmin.pdb
+E:\Proyectos\CALIDAD\CalidadAdmin\Git\desarrollo\SW_ModeloDeCalidad-ISO9126\4. Fuentes\WebAdmin\WebAdmin\obj\Debug\netcoreapp2.1\WebAdmin.genruntimeconfig.cache
+E:\Proyectos\CALIDAD\CalidadAdmin\Git\desarrollo\SW_ModeloDeCalidad-ISO9126\4. Fuentes\WebAdmin\WebAdmin\obj\Debug\netcoreapp2.1\WebAdmin.csproj.CopyComplete
