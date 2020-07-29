@@ -1,0 +1,21 @@
+<button
+  [attr.type]="type"
+  [class]="btnThemeClass"
+  [ngClass]="{
+    'g-btn--small': btnSmallClass,
+    'g-btn--pill': btnPillClass,
+    'g-btn--icon': btnIconClass,
+    'g-btn--fullwidth': btnFullWidthClass,
+    'g-btn--disabled': btnIsDisabled,
+    'g-btn--loading': btnIsLoading,
+    'g-btn--onlyicon': onlyIcon
+  }"
+  (click)="_handleClick()"
+  [disabled]="btnIsDisabled">
+  <span *ngIf="btnIconClass || onlyIcon">
+    <fa-icon [icon]="icon"></fa-icon>
+  </span>
+  <ng-container *ngIf="!onlyIcon">
+    {{ text }}
+  </ng-container>
+</button>

@@ -1,0 +1,34 @@
+<nav class="g-navbar__header">
+  <vm-button
+    [btnTheme]="'transparent'"
+    [icon]="['fas','bars']"
+    [onlyIcon]="true"
+    (eventClick)="toggle()"
+    [vmTooltip]="open ? 'Collapar menu' : 'Expandir menu'"
+  ></vm-button>
+  <div class="flex-spacer"></div>
+  <vm-dropdown
+    [dropdownAlignRightClass]="true"
+    [dropdownArrowClass]="true"
+    [btnTheme]="'transparent'"
+    [btnPillClass]="true"
+    [isIcon]="true">
+    <ul class="g-nav" *ngIf="user$ | async as user">
+      <li class="g-nav__section g-nav__section--first">
+        <span class="g-nav__section-text">
+          Hola {{ user.fullName }}
+        </span>
+      </li>
+      <li class="g-nav__item">
+        <a class="g-nav__link" (click)="logout()">
+          <div class="g-nav__link-icon">
+            <fa-icon [icon]="['fas','sign-out-alt']"></fa-icon>
+          </div>
+          <span class="g-nav__link-text">
+            Cerrar sesión
+          </span>
+        </a>
+      </li>
+    </ul>
+  </vm-dropdown>
+</nav>

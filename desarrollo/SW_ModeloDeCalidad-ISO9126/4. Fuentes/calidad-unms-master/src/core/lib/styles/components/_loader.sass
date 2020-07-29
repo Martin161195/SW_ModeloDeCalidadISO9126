@@ -1,0 +1,81 @@
+@keyframes g-loader-rotate
+  from
+    transform: rotate(0deg)
+  to
+    transform: rotate(359deg)
+
+.g-loader
+  position: relative
+
+  &:before
+    content: ''
+    box-sizing: border-box
+    position: absolute
+    top: 50%
+    left: 50%
+    border-top: #dfe2ea
+    border-right: 2px solid #dfe2ea
+    border-top-width: 2px
+    border-right-width: 2px
+    border-radius: 50%
+    width: 1.4rem
+    height: 1.4rem
+    margin-top: -.7rem
+    margin-left: -.7rem
+    animation: g-loader-rotate 0.6s linear infinite
+
+  &--lg.g-loader:before
+    width: 2rem
+    height: 2rem
+    margin-top: -1rem
+    margin-left: -1rem
+    border-top-width: 3px
+    border-right-width: 3px
+
+  &--primary.g-loader:before
+    border-right-color: $primary
+
+$offset: 187
+$duration: 1.4s
+
+.g-spinner__material--contaniner
+  display: block
+  position: relative
+
+
+.g-spinner__material
+  animation: rotator $duration linear infinite
+
+@keyframes rotator
+  0%
+    transform: rotate(0deg)
+  100%
+    transform: rotate(270deg)
+
+.g-spinner__material--circle
+  stroke-dasharray: $offset
+  stroke-dashoffset: 0
+  transform-origin: center
+  animation: dash $duration ease-in-out infinite, colors ($duration*4) ease-in-out infinite
+
+@keyframes colors
+  0%
+    stroke: #4285F4
+  25%
+    stroke: #DE3E35
+  50%
+    stroke: #F7C223
+  75%
+    stroke: #1B9A59
+  100%
+    stroke: #4285F4
+
+@keyframes dash
+ 0%
+    stroke-dashoffset: $offset
+ 50%
+    stroke-dashoffset: $offset/4
+    transform: rotate(135deg)
+ 100%
+   stroke-dashoffset: $offset
+   transform: rotate(450deg)

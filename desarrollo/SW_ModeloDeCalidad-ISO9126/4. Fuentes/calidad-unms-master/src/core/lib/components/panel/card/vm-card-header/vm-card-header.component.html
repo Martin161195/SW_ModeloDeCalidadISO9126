@@ -1,0 +1,32 @@
+<div class="g-card__header-caption">
+  <div class="g-card__header-title">
+    <span class="g-card__header-icon" *ngIf="icon.length > 0">
+      <fa-icon [icon]="icon"></fa-icon>
+    </span>
+    <h3 class="g-card__header-text">
+      {{ title }}
+    </h3>
+  </div>
+</div>
+<div class="g-card__header-tools">
+  <div class="g-card__nav">
+    <ng-content></ng-content>
+    <!-- Se puede colocar estos Items -->
+    <!-- <div class="g-card__nav-item">
+      <button class="button is-primary">Nueva Categoria</button>
+    </div>
+    <div class="g-card__nav-item">
+      <button class="button is-primary">Nueva Categoria</button>
+    </div>
+    <div class="g-card__nav-item">
+      <button class="button is-primary">Nueva Categoria</button>
+    </div> -->
+
+
+    <!-- <div class="g-card__nav-item">
+      <a href="" class="g-card__nav-link g-card__nav-link--icon">
+        <fa-icon [icon]="['fas','ellipsis-h']"></fa-icon>
+      </a>
+    </div> -->
+  </div>
+</div>

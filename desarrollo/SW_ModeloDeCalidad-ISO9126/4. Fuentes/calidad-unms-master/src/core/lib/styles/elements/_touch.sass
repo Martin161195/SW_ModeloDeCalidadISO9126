@@ -1,0 +1,141 @@
+.g-touch__list-wrapper
+  display: flex
+  flex-direction: row
+  flex-wrap: wrap
+  align-items: center
+  margin: -4px
+  justify-content: center
+  flex-grow: 1
+
+  .g-touch__standar
+    margin: 4px
+
+.g-touch
+  cursor: pointer
+  position: relative
+  overflow: hidden
+  box-sizing: border-box
+  transform: translateZ(0)
+  font-size: 0.875rem
+  transition: 280ms all
+  /* transition: box-shadow 280ms cubic-bezier(.4,0,.2,1) */
+  display: inline-flex
+  padding: 7px 12px
+  border-radius: 50%
+  align-items: center
+  min-height: 2rem
+  height: 1px
+  line-height: 1.25rem
+
+  &.g-touch--primary
+    background-color: $primary
+    color: $white
+
+    &:hover
+      background: darken($primary,6%)
+
+    &.active
+      background: darken($primary,6%)
+
+  &.g-touch--secondary,
+  .g-touch--default
+    background-color: $default
+    color: $text
+
+    &:hover
+      background: $orange
+      color: $white
+
+    &.active
+      background: $orange
+      color: $white
+
+  &.g-touch--accent
+    background-color: $accent
+    color: $white
+
+    &:hover
+      background: darken($accent,6%)
+
+    &.active
+      background: darken($accent,6%)
+
+  &.g-touch--danger
+    background-color: $danger
+    color: $white
+
+    &:hover
+      background: darken($danger,6%)
+
+    &.active
+      background: darken($danger,6%)
+
+  &.g-touch--dark
+    background-color: $dark
+    color: $white
+
+    &:hover
+      background: darken($dark,6%)
+
+    &.active
+      background: darken($dark,6%)
+
+  &.g-touch--info
+    background-color: $info
+    color: $white
+
+    &:hover
+      background: darken($info,6%)
+
+    &.active
+      background: darken($info,6%)
+
+  &.g-touch--metal
+    background-color: $metal
+    color: $white
+
+    &:hover
+      background: darken($metal,6%)
+
+    &.active
+      background: darken($metal,6%)
+
+  &.g-touch--orange
+    background-color: $orange
+    color: $white
+
+    &:hover
+      background: darken($orange,6%)
+
+    &.active
+      background: darken($orange,6%)
+
+  &.g-touch--purple
+    background-color: $purple
+    color: $white
+
+    &:hover
+      background: darken($purple,6%)
+
+    &.active
+      background: darken($purple,6%)
+
+  &.g-touch--success
+    background-color: $success
+    color: $white
+
+    &:hover
+      background: darken($success,6%)
+
+    &.active
+      background: darken($success,6%)
+
+  &.g-touch--yellow
+    background-color: $yellow
+    color: $white
+
+    &:hover
+      background: darken($yellow,6%)
+
+    &.active
+      background: darken($yellow,6%)

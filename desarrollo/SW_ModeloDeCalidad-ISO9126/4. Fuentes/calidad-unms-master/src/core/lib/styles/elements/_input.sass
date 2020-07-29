@@ -1,0 +1,313 @@
+
+.form-group
+  display: block
+  position: relative
+
+  .form-title
+    padding-top: 1.25rem
+    margin-bottom: -1.25rem
+    font-weight: 400
+
+.form-pt__default
+  padding-top: 1.25rem
+
+
+.form-button
+  display: block
+  padding-top: 1.25rem
+  position: relative
+  width: 100%
+
+  &.is-small
+    padding-top: 2rem
+
+.form-field
+  display: block
+  padding-top: 1.875rem
+  position: relative
+  width: 100%
+
+  .form-block__title
+    font-size: $font-size-block-title
+    text-transform: uppercase
+    font-weight: 500
+
+.form-checkbox
+  display: block
+  padding-top: $padding-top-input
+  position: relative
+  width: 100%
+
+  &.form-checkbox--large
+
+    .placeholder
+      font-size: $font-size-placeholder--large
+      font-weight: 500
+
+    .checkbox
+      top: 6px
+
+  .flex
+    display: flex
+    cursor: pointer
+    position: relative
+
+  .placeholder
+    font-size: $font-size-placeholder
+    text-align: justify
+    color: $color-placeholder-focus
+    padding-left: $padding-left-placeholder
+
+    &.no-visible
+      color: transparent
+
+  .checkbox
+    position: absolute
+    top: 4px
+    left: 0
+    height: $font-size-placeholder
+    width: $font-size-placeholder
+    border: 1px solid $primary
+    border-radius: 2px
+
+    &.auto
+      left: auto
+
+    &::after
+      left: 5px
+      top: 1px
+      width: 6px
+      height: 13px
+      border: solid $white
+      border-width: 0 3px 3px 0
+      transform: rotate(45deg)
+      content: ''
+      position: absolute
+      display: none
+
+  input
+    &[type='checkbox']
+      z-index: 10
+      position: absolute
+      opacity: 0
+      width: 100%
+      height: 100%
+      cursor: pointer
+
+    &:checked + .checkbox
+      background: $primary
+      border: 0
+
+      &::after
+        display: block
+
+.form-input,
+.form-select,
+.form-textarea
+  display: block
+  padding-top: $padding-top-input
+  position: relative
+  width: 100%
+
+  .placeholder
+    transform: translate(0, 0)
+    color: $color-placeholder
+    cursor: text
+    display: block
+    font-size: $font-size-placeholder
+    font-weight: $font-weight-placeholder
+    left: 0
+    overflow: hidden
+    position: absolute
+    text-overflow: ellipsis
+    top: $top-placeholder
+    transition: all 0.25s linear
+    white-space: nowrap
+    width: calc(100% - 25px)
+    z-index: 1
+
+  .icon
+    cursor: pointer
+    display: flex
+    color: #8db602
+    align-items: center
+    justify-content: center
+    font-size: 1.6rem
+    right: 0
+    position: absolute
+    top: 30px
+    transition: all 0.25s linear
+    width: 25px
+    z-index: 5
+
+.text-error
+  font-size: $font-size-text-error
+  color: $danger
+  margin-top: 5px
+  display: block
+
+.text-detail-promotion
+  font-size: .9rem
+  margin-top: 5px
+  display: block
+  font-weight: bold
+
+.form-input
+  .input
+    height: 35px
+    line-height: 35px
+    margin-top: 10px
+
+  .alter-text
+    position: absolute
+    right: 0
+    height: 35px
+    line-height: 35px
+    margin-top: 10px
+    color: $color-placeholder-focus
+
+  &.form-input__symbol
+
+    .input
+      padding-left: 30px
+
+    .alter-text
+      left: 0
+      right: auto
+
+    .placeholder
+      left: 30px
+
+.form-textarea
+  .input
+    min-height: 35px
+    margin-top: 10px
+    padding-top: 10px !important
+
+.input-focus .placeholder,
+.select-focus .placeholder
+  font-size: $font-size-placeholder-focus
+  transform: translate(0, -15px)
+  width: auto
+  color: $color-placeholder-focus
+  left: 0 !important
+
+.input-disabled
+  .placeholder
+    opacity: .35
+
+  input
+    opacity: .35
+
+  textarea
+    opacity: .35
+
+.select-disabled
+  .placeholder
+    opacity: .35
+
+  select
+    opacity: .35
+
+.form-input,
+.form-textarea
+  .flex
+    display: flex
+
+  .input
+    background-color: transparent
+    border: 0
+    border-radius: 0
+    box-shadow: none
+    color: $color-placeholder
+    font-size: $font-size-placeholder
+    font-weight: $font-weight-placeholder
+    outline: none
+    padding: 0
+    position: relative
+    width: 100%
+    z-index: 5
+    border-bottom: 1px solid $color-placeholder
+    transition: all 0.25s ease
+
+    &:focus
+      border-color: $color-placeholder-focus
+      border-width: 2px
+
+  .input:focus + .placeholder
+    font-size: $font-size-placeholder-focus
+    transform: translate(0, -15px)
+    width: auto
+    color: $color-placeholder-focus
+    left: 0 !important
+
+  &.input:focus + .placeholder
+    color: $color-placeholder-focus
+    font-weight: 500
+
+.form-select
+  .select
+    background-color: transparent
+    border: 0
+    border-radius: 0
+    box-shadow: none
+    color: $color-placeholder
+    font-size: $font-size-placeholder
+    font-weight: $font-weight-placeholder
+    height: 35px
+    line-height: 35px
+    margin-top: 10px
+    outline: none
+    padding: 0 25px 0 0
+    position: relative
+    width: 100%
+    z-index: 5
+    border-bottom: 1px solid $color-placeholder
+    transition: all 0.25s ease
+
+    &:focus
+      border-color: $color-placeholder-focus
+      border-width: 2px
+
+  .select:focus + .placeholder
+    font-size: $font-size-placeholder-focus
+    transform: translate(0, -15px)
+    width: auto
+    color: $color-placeholder-focus
+
+.form-input.ng-touched.ng-invalid,
+.form-textarea.ng-touched.ng-invalid,
+.form-select.ng-touched.ng-invalid,
+.form-checkbox.ng-touched.ng-invalid
+  .placeholder
+    color: $danger
+
+.form-input.ng-touched.ng-invalid,
+.form-textarea.ng-touched.ng-invalid
+  .input
+    color: $danger
+    border-bottom-color: $danger
+
+.form-select.ng-touched.ng-invalid
+  .select
+    color: $danger
+    border-bottom-color: $danger
+
+.form-checkbox.ng-touched.ng-invalid
+  .checkbox
+    border-color: $danger
+
+.form-input.ng-untouched + .text-error,
+.form-input.ng-valid + .text-error,
+.form-select.ng-untouched + .text-error,
+.form-select.ng-valid + .text-error,
+.form-checkbox.ng-untouched + .text-error,
+.form-checkbox.ng-valid + .text-error
+  display: none
+
+.form-color--view
+  position: absolute
+  left: 0
+  right: 0
+  bottom: 12px
+  height: 7px

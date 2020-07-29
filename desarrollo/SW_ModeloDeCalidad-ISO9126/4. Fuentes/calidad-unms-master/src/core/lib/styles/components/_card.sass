@@ -1,0 +1,152 @@
+.g-card
+  position: relative
+  margin-bottom: $m-p-size-card
+  background-color: white
+  box-shadow: 0 2px 1px -1px rgba(0,0,0,.2), 0 1px 1px 0 rgba(0,0,0,.14), 0 1px 3px 0 rgba(0,0,0,.12)
+  display: block
+
+  .g-card__loader
+    position: absolute
+    top: 0
+    bottom: 0
+    left: 0
+    right: 0
+    background: $white
+    display: flex
+    align-items: center
+    justify-content: center
+    z-index: 100
+
+  .g-card__header
+    display: flex
+    flex-direction: row
+    align-items: stretch
+    justify-content: space-between
+    padding: 0 $m-p-size-card
+    height: 5.1rem
+    position: relative
+    border-bottom: 1px solid $border-color-card
+
+  .g-card__body
+    display: block
+    padding: $m-p-size-card $m-p-size-card
+    position: relative
+
+    /* .g-card__body-form
+      margin-top: -1.875rem */
+
+    .g-card__body-form
+      margin-top: -2.2rem
+
+      .columns
+        margin: 0
+
+        .column
+          padding: 0 .75rem
+
+      +mobile
+        >.columns
+          .column
+            padding: 0
+
+      +tablet
+        >.columns
+          .column
+            &:first-child
+              padding-left: 0
+            &:last-child
+              padding-right: 0
+
+  .g-card__footer
+    display: block
+    padding: 1.1rem $m-p-size-card
+    border-top: 1px solid $border-color-card
+
+    &.g-card__footer--fit
+      padding: 0 !important
+
+  &.g-card--rounded
+    border-radius: 4px
+
+  &.g-card--space
+    padding: 0 $m-p-size-card
+
+    .g-card__header
+      padding: $m-p-size-card 0
+
+    .g-card__body
+      padding: $m-p-size-card 0
+
+  &.g-card--bordered-semi
+
+    .g-card__header
+      border: 0
+
+.g-card__header
+
+  .g-card__header-caption
+    display: flex
+    align-items: center
+    align-content: flex-start
+
+    .g-card__header-title
+      display: flex
+      align-items: center
+
+      .g-card__header-icon
+        display: flex
+        align-items: center
+        line-height: 0
+        padding: 0 13px 0 0
+        font-size: 16px
+
+      .g-card__header-text
+        display: flex
+        align-items: center
+        font-size: 1.3rem
+        font-weight: 500
+        margin: 0
+        padding: 0
+
+  .g-card__header-tools
+    display: flex
+    align-items: center
+    align-content: flex-end
+
+    .g-card__nav
+      display: flex
+      align-items: center
+      padding: 0
+      margin: 0
+      list-style: none
+
+      .g-card__nav-item
+        display: flex
+        padding: 8px 5px
+        align-items: center
+
+        .g-card__nav-link
+
+          &:hover
+            text-decoration: none
+
+          &.g-card__nav-link--icon
+            padding: 0 2px
+            font-size: 1.4rem
+
+            &.g-card__nav-link--icon-xl
+              font-size: 2.2rem
+
+.g-card__footer
+
+  .g-card__footer-buttons
+    display: flex
+    align-items: center
+    justify-content: flex-end
+
+    button, vm-button
+      margin-left: 10px
+
+      &:first-child
+        margin-left: 0
+
