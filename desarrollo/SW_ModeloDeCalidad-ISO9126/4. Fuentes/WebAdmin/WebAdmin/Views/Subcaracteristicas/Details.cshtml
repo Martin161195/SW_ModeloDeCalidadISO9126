@@ -1,0 +1,30 @@
+﻿@model WebAdmin.Models.Subcaracteristica
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Detalles</h2>
+
+<div>
+    <h4>Subcaracteristica</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Nombre)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Nombre)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.IdCaracteristicaNavigation)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.IdCaracteristicaNavigation.Nombre)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.IdSubcaracteristica">Editar</a> |
+    <a asp-action="Index">Ir a Listado</a>
+</div>
