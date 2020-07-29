@@ -1,11 +1,12 @@
-CREATE DEFINER=`swmciso9126`@`%` PROCEDURE `PROC_login`(
+DELIMITER //
+CREATE  PROCEDURE `PROC_login`(
 	IN userval VARCHAR(50),
     IN passwordval VARCHAR(50),
     OUT code_rsp INT,
     OUT message_rsp VARCHAR(50)
 )
 BEGIN
-  declare flag INTEGER;
+  declare flag int;
   
   SELECT COUNT(0) INTO flag FROM Cuenta cu WHERE cu.user = userval AND cu.password = md5(passwordval);
   
@@ -18,3 +19,4 @@ BEGIN
   END IF;
   
 END
+DELIMITER ;
