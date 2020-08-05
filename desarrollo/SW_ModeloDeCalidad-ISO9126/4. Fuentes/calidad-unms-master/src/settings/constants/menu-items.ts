@@ -7,13 +7,20 @@ export const MENU_ITEMS: Array<any> = [
     items: []
   },
   {
+    name: 'Proyectos',
+    prefixIcon: 'fas',
+    iconName: 'users',
+    router: '/appointment',
+    items: []
+  },
+  {
     name: 'Clientes',
     prefixIcon: 'fas',
     iconName: 'users',
     router: '/customer',
     items: []
-  },
-  {
+  }
+  /*{
     name: 'Citas',
     prefixIcon: 'far',
     iconName: 'calendar-alt',
@@ -91,5 +98,5 @@ export const MENU_ITEMS: Array<any> = [
         router: '/configuration/appointment-status'
       }
     ]
-  }
+  }*/
 ];

@@ -7,8 +7,8 @@ const gitInfo = gitDescribeSync();
 let data = {
   commit: gitInfo.suffix,
   gitdescribe: gitInfo,
-  title: 'Software y App de Gestión para Salones de Belleza y Clinicas Dentales | Vertemejor',
-  description: 'Administrador Vertemejor para la administración, control y gestión de los negocios en el rubro de la belleza y salud.',
+  title: 'Software Modelo de Calidad ISO 9126',
+  description: 'Aplicación Web para Modelo de Calidad basado en el ISO 9126',
 };
 
 
