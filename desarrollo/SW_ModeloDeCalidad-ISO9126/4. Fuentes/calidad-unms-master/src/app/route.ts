@@ -19,7 +19,13 @@ export const routes: Routes = [
         path: '',
         loadChildren: () => import('../main/views/admin/+dashboard/dashboard.module')
           .then(m => m.DashboardModule)
+      },
+      {
+        path: 'projects',
+        loadChildren: () => import('../main/views/admin/+dashboard/dashboard.module')
+          .then(m => m.DashboardModule)
       }
+
     ]
   },
   {

@@ -9,8 +9,8 @@ export const MENU_ITEMS: Array<any> = [
   {
     name: 'Proyectos',
     prefixIcon: 'fas',
-    iconName: 'users',
-    router: '/appointment',
+    iconName: 'users-cog',
+    router: '/projects',
     items: []
   },
   {

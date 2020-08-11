@@ -27,7 +27,14 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.sass"
+              //"src/assets/css/material-dashboard.css?v=2.1.1",
+              //"src/assets/css/material-dashboard.min.css",
+              "src/styles.sass",
+              "./node_modules/bootstrap/dist/css/bootstrap.css",
+              "./node_modules/material-dashboard/assets/css/material-dashboard.min.css",
+              "./node_modules/material-dashboard/assets/css/material-dashboard.css",
+              "./node_modules/material-dashboard/assets/scss/material-dashboard.scss"
+
             ],
             "stylePreprocessorOptions": {
               "includePaths": [
@@ -35,7 +42,12 @@
               ]
             },
             "scripts": [
-              "src/assets/js/aws-sdk-2.509.0.min.js"
+              "src/assets/js/aws-sdk-2.509.0.min.js",
+              
+              "./node_modules/jquery/dist/jquery.js",
+              "./node_modules/popper.js/dist/umd/popper.js",
+              "./node_modules/bootstrap/dist/js/bootstrap.js",
+              "./node_modules/material-dashboard/assets/js/material-dashboard.js"
             ]
           },
           "configurations": {

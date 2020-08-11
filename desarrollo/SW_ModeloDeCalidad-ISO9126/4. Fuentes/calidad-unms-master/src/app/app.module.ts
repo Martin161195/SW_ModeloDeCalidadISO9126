@@ -9,13 +9,15 @@ import { ListLayoutsModules } from '@main/layouts';
 import { HelpersProvidersModule } from '@shared/helpers/helpers-providers.module';
 import { RootStoreModule } from 'src/root-store';
 import { AppRoutingModule } from './app.routing';
-
+//import { MaterialDesign } from './node_modules/';
 import { AppComponent } from './app.component';
 import { AppInjectables } from './app.injectables';
+//import { ProjectComponent } from './src/main/views/admin/project/project.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    //ProjectComponent
   ],
   imports: [
     BrowserModule,

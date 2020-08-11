@@ -1,11 +1,11 @@
 <div class="col-md-12">
               <div class="card">
                 <div class="card-header card-header-primary">
-                  <h4 class="card-title pull-left">Lista de insumos</h4>
-                    <button (click)="btnAgregar()" class="btn btn-white btn-round pull-right" style="padding:10px">
+                  <h4 class="card-title pull-left">Lista de características</h4>
+                    <!--<button (click)="btnAgregar()" class="btn btn-white btn-round pull-right" style="padding:10px">
                       Agregar nuevo insumo
                       <i class="material-icons">add</i>
-                    </button>
+                    </button>-->
                 </div>
                 <div class="card-body">
                   <div class="table-responsive">
@@ -15,10 +15,10 @@
                           #
                         </th>
                         <th>
-                          Nombre insumo
+                          Nombre Característica
                         </th>
                         <th>
-                          Cantidad mínima
+                          Subcaracterísticas
                         </th>
                         <th>
                           <!-- Editar -->
@@ -28,23 +28,21 @@
                         </th>
                       </tr></thead>
                       <tbody>
-                        <tr *ngFor="let insumo of insumos; index as i">
+                        <tr *ngFor="let Caracteristica of caracteristicas; index as i">
                           <td>
                             {{i+1}}
                           </td>
                           <td>
-                            {{insumo.nombre_insumo}}
+                            {{caracteristica.nombre_caracteristica}}
                           </td>
+                          
                           <td>
-                            {{insumo.cantidad_minima }} {{ insumo.unidades}}
-                          </td>
-                          <td>
-                            <button (click)="btnEditar(insumo.idinsumo)" class="btn btn-success btn-round btn-just-icon">
+                            <button (click)="btnVer(caracteristica.idcaracteristica)" class="btn btn-success btn-round btn-just-icon">
                               <i class="material-icons">create</i>
                             </button>
                           </td>
                           <td>
-                            <button (click)="btnEliminar(insumo.idinsumo)" class="btn btn-danger btn-round btn-just-icon" >
+                            <button (click)="btnEliminar(caracteristica.idcaracteristica)" class="btn btn-danger btn-round btn-just-icon" >
                               <i class="material-icons">delete</i>
                             </button>
                           </td>
