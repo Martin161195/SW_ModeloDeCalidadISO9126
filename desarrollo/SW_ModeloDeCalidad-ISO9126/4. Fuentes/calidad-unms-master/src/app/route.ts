@@ -24,6 +24,11 @@ export const routes: Routes = [
         path: 'projects',
         loadChildren: () => import('../main/views/admin/+dashboard/dashboard.module')
           .then(m => m.DashboardModule)
+      },
+      {
+        path: 'projects/subcaracteristics',
+        loadChildren: () => import('../main/views/admin/project/project.module')
+          .then(m => m.ProjectModule)
       }
 
     ]

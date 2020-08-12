@@ -2,10 +2,10 @@
               <div class="card">
                 <div class="card-header card-header-primary">
                   <h4 class="card-title pull-left">Lista de características</h4>
-                    <!--<button (click)="btnAgregar()" class="btn btn-white btn-round pull-right" style="padding:10px">
-                      Agregar nuevo insumo
+                    <button class="btn btn-white btn-round pull-right" style="padding:10px">
+                      Característica nueva
                       <i class="material-icons">add</i>
-                    </button>-->
+                    </button>
                 </div>
                 <div class="card-body">
                   <div class="table-responsive">
@@ -20,25 +20,27 @@
                         <th>
                           Subcaracterísticas
                         </th>
+                        <!-- <th>
+                         	Ver
+                        </th> -->
                         <th>
-                          <!-- Editar -->
-                        </th>
-                        <th>
-                          <!-- Eliminar -->
+                          	Eliminar
                         </th>
                       </tr></thead>
                       <tbody>
-                        <tr *ngFor="let Caracteristica of caracteristicas; index as i">
+                        <!-- <tr *ngFor="let caracteristica of caracteristicas; index as i"> -->
                           <td>
-                            {{i+1}}
+                          	1
+                            <!--{{i+1}}-->
                           </td>
                           <td>
-                            {{caracteristica.nombre_caracteristica}}
+                          	Usabilidad
+                            <!--{{caracteristica.nombre_caracteristica}}-->
                           </td>
                           
                           <td>
                             <button (click)="btnVer(caracteristica.idcaracteristica)" class="btn btn-success btn-round btn-just-icon">
-                              <i class="material-icons">create</i>
+                              <i class="material-icons">all_out</i>
                             </button>
                           </td>
                           <td>
@@ -46,7 +48,7 @@
                               <i class="material-icons">delete</i>
                             </button>
                           </td>
-                        </tr>
+                        <!-- </tr> -->
                       </tbody>
                     </table>
                   </div>

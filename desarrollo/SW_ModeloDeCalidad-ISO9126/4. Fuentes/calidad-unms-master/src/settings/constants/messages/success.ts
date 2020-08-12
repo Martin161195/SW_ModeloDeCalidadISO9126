@@ -10,7 +10,7 @@ export const VMSuccess: any = {
     es: 'Gracias por revisar tu correo electrónico, tu cuenta fue activada.'
   },
   SAUTHL_001: {
-    es: 'Gracias por usar Vertemejor.'
+    es: 'Gracias por usar TeamSoft.'
   },
   // Front end Local Establishment
   SFRON_LOCES_001: {
