@@ -43,8 +43,8 @@ public class SwmcisoDAOImpl implements ISwmcisoDAO {
 			callStmt.registerOutParameter(8, Types.VARCHAR);
 			callStmt.execute();
 
-			response.setCode(callStmt.getInt(3));
-			response.setMessage(callStmt.getString(4));
+			response.setCode(callStmt.getInt(7));
+			response.setMessage(callStmt.getString(8));
 
 			log.info(response.getMessage());
 
@@ -63,7 +63,7 @@ public class SwmcisoDAOImpl implements ISwmcisoDAO {
 		try (Connection conn = bigTConn.getDataSource().getConnection();) {
 
 			CallableStatement callStmt = null;
-			callStmt = conn.prepareCall("{call " + spTransporte + "(?,?,?,?,?,?,?,?)}");
+			callStmt = conn.prepareCall("{call " + spTransporte + "(?,?,?,?,?,?)}");
 			callStmt.setInt(1, request.getIdEntidad());
 			callStmt.setInt(2, request.getIdProyecto());
 			callStmt.setBigDecimal(3, request.getPonderacion());

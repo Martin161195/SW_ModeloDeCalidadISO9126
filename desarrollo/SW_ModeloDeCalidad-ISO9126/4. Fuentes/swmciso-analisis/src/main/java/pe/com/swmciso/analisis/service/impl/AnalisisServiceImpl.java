@@ -2,6 +2,7 @@ package pe.com.swmciso.analisis.service.impl;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.Map;
@@ -26,12 +27,11 @@ public class AnalisisServiceImpl implements IAnalisisService {
 	@Autowired
 	private SwmcisoDAOImpl dao;
 
-	@SuppressWarnings("null")
 	@Override
 	public ResponsePonderacionEntidades ponderacionEntidades(RequestPonderacionEntidades request) {
 		ResponsePonderacionEntidades response = new ResponsePonderacionEntidades();
-		List<ResponseGuardarMatrizPareada> matrizPareadaResponseList = null;
-		List<ResponseGuardarPonderacionEntidad> ponderacionEntidadResponseList = null;
+		List<ResponseGuardarMatrizPareada> matrizPareadaResponseList = new ArrayList<ResponseGuardarMatrizPareada>();
+		List<ResponseGuardarPonderacionEntidad> ponderacionEntidadResponseList = new ArrayList<ResponseGuardarPonderacionEntidad>();
 		List<ValorMatriz> matriz = request.getListMatriz();
 		Integer size = (int) Math.sqrt(matriz.size());
 		
@@ -53,16 +53,16 @@ public class AnalisisServiceImpl implements IAnalisisService {
 		for(ValorMatriz valor: matriz) {
 			matrizPareada[treeMapId.get(valor.getIdx())][treeMapId.get(valor.getIdy())] = valor.getValor(); 
 		}
-		
+
 		//PRIMER PASO
 		for(int i = 0; i < size; i++) {
 			BigDecimal val = new BigDecimal(0);
 			for(int j = 0; j < size; j++) {
-				val.add(matrizPareada[j][i]);
+				val = val.add(matrizPareada[j][i]);
 			}
 			vectorSuma[i] = val;
 		}
-		
+
 		//SEGUNDO PASO
 		for(int i = 0; i < size; i++) {
 			BigDecimal val = vectorSuma[i];
