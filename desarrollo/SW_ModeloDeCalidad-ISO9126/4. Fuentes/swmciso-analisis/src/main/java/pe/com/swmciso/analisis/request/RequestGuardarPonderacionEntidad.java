@@ -16,5 +16,6 @@ public class RequestGuardarPonderacionEntidad implements Serializable{
 	private Integer idEntidad;
 	private Integer idProyecto;
 	private BigDecimal ponderacion;
+	private String tipo;
 
 }

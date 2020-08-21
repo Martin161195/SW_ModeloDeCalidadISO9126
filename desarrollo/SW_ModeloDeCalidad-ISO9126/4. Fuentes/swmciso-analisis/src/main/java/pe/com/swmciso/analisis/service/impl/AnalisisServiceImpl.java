@@ -15,6 +15,8 @@ import pe.com.swmciso.analisis.dao.impl.SwmcisoDAOImpl;
 import pe.com.swmciso.analisis.request.RequestGuardarMatrizPareada;
 import pe.com.swmciso.analisis.request.RequestGuardarPonderacionEntidad;
 import pe.com.swmciso.analisis.request.RequestPonderacionEntidades;
+import pe.com.swmciso.analisis.response.ResponseGuardarMatrizPareada;
+import pe.com.swmciso.analisis.response.ResponseGuardarPonderacionEntidad;
 import pe.com.swmciso.analisis.response.ResponsePonderacionEntidades;
 import pe.com.swmciso.analisis.service.IAnalisisService;
 
@@ -24,8 +26,12 @@ public class AnalisisServiceImpl implements IAnalisisService {
 	@Autowired
 	private SwmcisoDAOImpl dao;
 
+	@SuppressWarnings("null")
 	@Override
 	public ResponsePonderacionEntidades ponderacionEntidades(RequestPonderacionEntidades request) {
+		ResponsePonderacionEntidades response = new ResponsePonderacionEntidades();
+		List<ResponseGuardarMatrizPareada> matrizPareadaResponseList = null;
+		List<ResponseGuardarPonderacionEntidad> ponderacionEntidadResponseList = null;
 		List<ValorMatriz> matriz = request.getListMatriz();
 		Integer size = (int) Math.sqrt(matriz.size());
 		
@@ -75,6 +81,7 @@ public class AnalisisServiceImpl implements IAnalisisService {
 		}
 		
 		for(ValorMatriz valor: matriz) {
+			ResponseGuardarMatrizPareada responseMatrizPareada = new ResponseGuardarMatrizPareada();
 			RequestGuardarMatrizPareada requestMatrizPareada = new RequestGuardarMatrizPareada();
 			requestMatrizPareada.setIdEntidadPadre(request.getIdEntidad());
 			requestMatrizPareada.setIdEntidadX(valor.getIdx());
@@ -83,21 +90,23 @@ public class AnalisisServiceImpl implements IAnalisisService {
 			requestMatrizPareada.setTipo(request.getTipo());
 			requestMatrizPareada.setValor(valor.getValor());
 			
-			dao.guardarMatrizPareada(requestMatrizPareada);
-			
+			responseMatrizPareada = dao.guardarMatrizPareada(requestMatrizPareada);
+			matrizPareadaResponseList.add(responseMatrizPareada);
 		}
 		
 		for(int i = 0; i < size; i++) {
+			ResponseGuardarPonderacionEntidad responsePonderacionEntidad = new ResponseGuardarPonderacionEntidad();
 			RequestGuardarPonderacionEntidad requestPonderacionEntidad = new RequestGuardarPonderacionEntidad();
 			requestPonderacionEntidad.setIdEntidad(treeMapIndex.get(i));
 			requestPonderacionEntidad.setIdProyecto(request.getIdProyecto());
 			requestPonderacionEntidad.setPonderacion(vectorPromedio[i]);
-			
-			dao.guardarPonderacionEntidad(requestPonderacionEntidad);
-			
+			requestPonderacionEntidad.setTipo(request.getTipo());
+			responsePonderacionEntidad = dao.guardarPonderacionEntidad(requestPonderacionEntidad);
+			ponderacionEntidadResponseList.add(responsePonderacionEntidad);
 		}
-		
-		return null;
+		response.setMatrizPareadaResponseList(matrizPareadaResponseList);
+		response.setPonderacionEntidadResponseList(ponderacionEntidadResponseList);
+		return response;
 	}
 
 }

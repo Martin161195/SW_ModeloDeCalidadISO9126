@@ -58,7 +58,30 @@ public class SwmcisoDAOImpl implements ISwmcisoDAO {
 
 	@Override
 	public ResponseGuardarPonderacionEntidad guardarPonderacionEntidad(RequestGuardarPonderacionEntidad request) {
-		// TODO Auto-generated method stub
-		return null;
+		ResponseGuardarPonderacionEntidad response = new ResponseGuardarPonderacionEntidad();
+		String spTransporte = "PROC_guardar_ponderacion_entidad";
+		try (Connection conn = bigTConn.getDataSource().getConnection();) {
+
+			CallableStatement callStmt = null;
+			callStmt = conn.prepareCall("{call " + spTransporte + "(?,?,?,?,?,?,?,?)}");
+			callStmt.setInt(1, request.getIdEntidad());
+			callStmt.setInt(2, request.getIdProyecto());
+			callStmt.setBigDecimal(3, request.getPonderacion());
+			callStmt.setString(4, request.getTipo());
+			callStmt.registerOutParameter(5, Types.INTEGER);
+			callStmt.registerOutParameter(6, Types.VARCHAR);
+			callStmt.execute();
+
+			response.setCode(callStmt.getInt(5));
+			response.setMessage(callStmt.getString(6));
+
+			log.info(response.getMessage());
+
+			callStmt.close();
+			conn.close();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return response;
 	}
 }

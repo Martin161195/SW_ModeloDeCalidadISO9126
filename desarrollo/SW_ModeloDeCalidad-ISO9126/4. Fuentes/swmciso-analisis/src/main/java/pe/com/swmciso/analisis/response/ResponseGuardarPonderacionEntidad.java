@@ -12,5 +12,7 @@ public class ResponseGuardarPonderacionEntidad implements Serializable {
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
+	private int code;
+	private String message;
 
 }
