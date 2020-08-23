@@ -13,6 +13,8 @@ public class PonderacionValor implements Serializable {
 	 */
 	private static final long serialVersionUID = 1L;
 	private Integer prioridad;
-	private String nombreMetrica;
-	private BigDecimal ponderacion;
+	private String caracteristica;
+	private String metrica;
+	private String subcaracteristica;
+	private BigDecimal peso;
 }

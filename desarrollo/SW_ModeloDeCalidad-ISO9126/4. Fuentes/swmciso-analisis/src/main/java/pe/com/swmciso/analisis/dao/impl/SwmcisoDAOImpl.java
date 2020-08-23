@@ -108,8 +108,10 @@ public class SwmcisoDAOImpl implements ISwmcisoDAO {
 			
 			while(rs.next()) {
 				PonderacionValor valor = new PonderacionValor();
-				valor.setNombreMetrica(rs.getString("nombre"));
-				valor.setPonderacion(rs.getBigDecimal("ponderado"));
+				valor.setCaracteristica(rs.getString("caracteristica"));
+				valor.setSubcaracteristica(rs.getString("subcaracteristica"));
+				valor.setMetrica(rs.getString("metrica"));
+				valor.setPeso(rs.getBigDecimal("peso"));
 				valor.setPrioridad(prioridad);
 				lista.add(valor);
 				prioridad += 1;
