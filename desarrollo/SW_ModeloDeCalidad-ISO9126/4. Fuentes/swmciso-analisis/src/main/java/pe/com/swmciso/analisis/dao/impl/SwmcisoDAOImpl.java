@@ -2,8 +2,11 @@ package pe.com.swmciso.analisis.dao.impl;
 
 import java.sql.CallableStatement;
 import java.sql.Connection;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Types;
+import java.util.ArrayList;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -11,11 +14,13 @@ import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
 import lombok.extern.slf4j.Slf4j;
+import pe.com.swmciso.analisis.bean.PonderacionValor;
 import pe.com.swmciso.analisis.dao.ISwmcisoDAO;
 import pe.com.swmciso.analisis.request.RequestGuardarMatrizPareada;
 import pe.com.swmciso.analisis.request.RequestGuardarPonderacionEntidad;
 import pe.com.swmciso.analisis.response.ResponseGuardarMatrizPareada;
 import pe.com.swmciso.analisis.response.ResponseGuardarPonderacionEntidad;
+import pe.com.swmciso.analisis.response.ResponseResultadoPonderacion;
 
 @Slf4j
 @Transactional
@@ -79,6 +84,41 @@ public class SwmcisoDAOImpl implements ISwmcisoDAO {
 
 			callStmt.close();
 			conn.close();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return response;
+	}
+
+	@Override
+	public ResponseResultadoPonderacion resultadoPonderacion(Integer idProyecto) {
+		ResponseResultadoPonderacion response = new ResponseResultadoPonderacion();
+		List<PonderacionValor> lista = new ArrayList<PonderacionValor>();
+		String spTransporte = "PROC_reporte_lista_metricas_priorizadas";
+		Integer prioridad = new Integer(1);
+
+		try (Connection conn = bigTConn.getDataSource().getConnection();) {
+
+			CallableStatement callStmt = null;
+			callStmt = conn.prepareCall("{call " + spTransporte + "(?)}");
+			callStmt.setInt(1, idProyecto);
+			callStmt.execute();
+			
+			ResultSet rs = callStmt.getResultSet();
+			
+			while(rs.next()) {
+				PonderacionValor valor = new PonderacionValor();
+				valor.setNombreMetrica(rs.getString("nombre"));
+				valor.setPonderacion(rs.getBigDecimal("ponderado"));
+				valor.setPrioridad(prioridad);
+				lista.add(valor);
+				prioridad += 1;
+			}
+
+			callStmt.close();
+			conn.close();
+			
+			response.setListapriorizada(lista);
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}

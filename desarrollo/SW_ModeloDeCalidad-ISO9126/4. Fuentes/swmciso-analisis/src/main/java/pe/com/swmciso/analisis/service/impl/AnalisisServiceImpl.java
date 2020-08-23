@@ -12,20 +12,21 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import pe.com.swmciso.analisis.bean.ValorMatriz;
-import pe.com.swmciso.analisis.dao.impl.SwmcisoDAOImpl;
+import pe.com.swmciso.analisis.dao.ISwmcisoDAO;
 import pe.com.swmciso.analisis.request.RequestGuardarMatrizPareada;
 import pe.com.swmciso.analisis.request.RequestGuardarPonderacionEntidad;
 import pe.com.swmciso.analisis.request.RequestPonderacionEntidades;
 import pe.com.swmciso.analisis.response.ResponseGuardarMatrizPareada;
 import pe.com.swmciso.analisis.response.ResponseGuardarPonderacionEntidad;
 import pe.com.swmciso.analisis.response.ResponsePonderacionEntidades;
+import pe.com.swmciso.analisis.response.ResponseResultadoPonderacion;
 import pe.com.swmciso.analisis.service.IAnalisisService;
 
 @Service
 public class AnalisisServiceImpl implements IAnalisisService {
 
 	@Autowired
-	private SwmcisoDAOImpl dao;
+	private ISwmcisoDAO dao;
 
 	@Override
 	public ResponsePonderacionEntidades ponderacionEntidades(RequestPonderacionEntidades request) {
@@ -107,6 +108,11 @@ public class AnalisisServiceImpl implements IAnalisisService {
 		response.setMatrizPareadaResponseList(matrizPareadaResponseList);
 		response.setPonderacionEntidadResponseList(ponderacionEntidadResponseList);
 		return response;
+	}
+
+	@Override
+	public ResponseResultadoPonderacion resultadoPonderacion(Integer idProyecto) {
+		return dao.resultadoPonderacion(idProyecto);
 	}
 
 }
