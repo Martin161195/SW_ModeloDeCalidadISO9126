@@ -5,9 +5,10 @@ import java.math.BigDecimal;
 
 import lombok.Getter;
 import lombok.Setter;
+
 @Getter
 @Setter
-public class RequestGuardarMatrizPareada implements Serializable{
+public class RequestGuardarMatrizPareada implements Serializable {
 
 	/**
 	 * 

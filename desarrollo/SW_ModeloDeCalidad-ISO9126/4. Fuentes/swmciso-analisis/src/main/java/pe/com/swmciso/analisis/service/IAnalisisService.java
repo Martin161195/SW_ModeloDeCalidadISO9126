@@ -6,7 +6,7 @@ import pe.com.swmciso.analisis.response.ResponseResultadoPonderacion;
 
 public interface IAnalisisService {
 	public ResponsePonderacionEntidades ponderacionEntidades(RequestPonderacionEntidades request);
-	
+
 	public ResponseResultadoPonderacion resultadoPonderacion(Integer idProyecto);
 
 }

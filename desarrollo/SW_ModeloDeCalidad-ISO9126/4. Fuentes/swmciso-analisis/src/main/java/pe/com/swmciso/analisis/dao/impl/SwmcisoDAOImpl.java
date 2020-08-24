@@ -103,10 +103,10 @@ public class SwmcisoDAOImpl implements ISwmcisoDAO {
 			callStmt = conn.prepareCall("{call " + spTransporte + "(?)}");
 			callStmt.setInt(1, idProyecto);
 			callStmt.execute();
-			
+
 			ResultSet rs = callStmt.getResultSet();
-			
-			while(rs.next()) {
+
+			while (rs.next()) {
 				PonderacionValor valor = new PonderacionValor();
 				valor.setCaracteristica(rs.getString("caracteristica"));
 				valor.setSubcaracteristica(rs.getString("subcaracteristica"));
@@ -119,7 +119,7 @@ public class SwmcisoDAOImpl implements ISwmcisoDAO {
 
 			callStmt.close();
 			conn.close();
-			
+
 			response.setListapriorizada(lista);
 		} catch (SQLException e) {
 			e.printStackTrace();

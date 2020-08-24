@@ -35,53 +35,52 @@ public class AnalisisServiceImpl implements IAnalisisService {
 		List<ResponseGuardarPonderacionEntidad> ponderacionEntidadResponseList = new ArrayList<ResponseGuardarPonderacionEntidad>();
 		List<ValorMatriz> matriz = request.getListMatriz();
 		Integer size = (int) Math.sqrt(matriz.size());
-		
-		
+
 		BigDecimal matrizPareada[][] = new BigDecimal[size][size];
 		BigDecimal matrizResultado[][] = new BigDecimal[size][size];
 		BigDecimal vectorSuma[] = new BigDecimal[size];
 		BigDecimal vectorPromedio[] = new BigDecimal[size];
 		Map<Integer, Integer> treeMapIndex = new TreeMap<Integer, Integer>();
 		Map<Integer, Integer> treeMapId = new TreeMap<Integer, Integer>();
-		
+
 		Collections.sort(matriz);
-		
-		for(int i = 0; i < size; i++) {
+
+		for (int i = 0; i < size; i++) {
 			treeMapIndex.put(i, matriz.get(i).getIdy());
 			treeMapId.put(matriz.get(i).getIdy(), i);
 		}
-		
-		for(ValorMatriz valor: matriz) {
-			matrizPareada[treeMapId.get(valor.getIdx())][treeMapId.get(valor.getIdy())] = valor.getValor(); 
+
+		for (ValorMatriz valor : matriz) {
+			matrizPareada[treeMapId.get(valor.getIdx())][treeMapId.get(valor.getIdy())] = valor.getValor();
 		}
 
-		//PRIMER PASO
-		for(int i = 0; i < size; i++) {
+		// PRIMER PASO
+		for (int i = 0; i < size; i++) {
 			BigDecimal val = new BigDecimal(0);
-			for(int j = 0; j < size; j++) {
+			for (int j = 0; j < size; j++) {
 				val = val.add(matrizPareada[j][i]);
 			}
 			vectorSuma[i] = val;
 		}
 
-		//SEGUNDO PASO
-		for(int i = 0; i < size; i++) {
+		// SEGUNDO PASO
+		for (int i = 0; i < size; i++) {
 			BigDecimal val = vectorSuma[i];
-			for(int j = 0; j < size; j++) {
+			for (int j = 0; j < size; j++) {
 				matrizResultado[i][j] = matrizPareada[i][j].divide(val, 10, RoundingMode.CEILING);
 			}
 		}
-		
-		//TERCER PASO
-		for(int i = 0; i < size; i++) {
+
+		// TERCER PASO
+		for (int i = 0; i < size; i++) {
 			BigDecimal val = new BigDecimal(0);
-			for(int j = 0; j < size; j++) {
+			for (int j = 0; j < size; j++) {
 				val.add(matrizPareada[i][j]);
 			}
 			vectorPromedio[i] = val.divide(new BigDecimal(size), 10, RoundingMode.CEILING);
 		}
-		
-		for(ValorMatriz valor: matriz) {
+
+		for (ValorMatriz valor : matriz) {
 			ResponseGuardarMatrizPareada responseMatrizPareada = new ResponseGuardarMatrizPareada();
 			RequestGuardarMatrizPareada requestMatrizPareada = new RequestGuardarMatrizPareada();
 			requestMatrizPareada.setIdEntidadPadre(request.getIdEntidad());
@@ -90,12 +89,12 @@ public class AnalisisServiceImpl implements IAnalisisService {
 			requestMatrizPareada.setIdProyecto(request.getIdProyecto());
 			requestMatrizPareada.setTipo(request.getTipo());
 			requestMatrizPareada.setValor(valor.getValor());
-			
+
 			responseMatrizPareada = dao.guardarMatrizPareada(requestMatrizPareada);
 			matrizPareadaResponseList.add(responseMatrizPareada);
 		}
-		
-		for(int i = 0; i < size; i++) {
+
+		for (int i = 0; i < size; i++) {
 			ResponseGuardarPonderacionEntidad responsePonderacionEntidad = new ResponseGuardarPonderacionEntidad();
 			RequestGuardarPonderacionEntidad requestPonderacionEntidad = new RequestGuardarPonderacionEntidad();
 			requestPonderacionEntidad.setIdEntidad(treeMapIndex.get(i));

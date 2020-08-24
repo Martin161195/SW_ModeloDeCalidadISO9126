@@ -5,9 +5,10 @@ import java.math.BigDecimal;
 
 import lombok.Getter;
 import lombok.Setter;
+
 @Getter
 @Setter
-public class RequestGuardarPonderacionEntidad implements Serializable{
+public class RequestGuardarPonderacionEntidad implements Serializable {
 
 	/**
 	 * 

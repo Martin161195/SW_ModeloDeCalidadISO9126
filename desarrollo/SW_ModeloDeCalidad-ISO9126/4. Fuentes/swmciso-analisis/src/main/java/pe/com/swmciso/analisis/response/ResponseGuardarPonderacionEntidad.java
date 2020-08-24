@@ -4,6 +4,7 @@ import java.io.Serializable;
 
 import lombok.Getter;
 import lombok.Setter;
+
 @Getter
 @Setter
 public class ResponseGuardarPonderacionEntidad implements Serializable {

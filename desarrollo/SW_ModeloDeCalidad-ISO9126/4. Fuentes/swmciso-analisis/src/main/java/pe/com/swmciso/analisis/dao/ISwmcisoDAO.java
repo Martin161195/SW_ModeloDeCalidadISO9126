@@ -8,6 +8,8 @@ import pe.com.swmciso.analisis.response.ResponseResultadoPonderacion;
 
 public interface ISwmcisoDAO {
 	public ResponseGuardarMatrizPareada guardarMatrizPareada(RequestGuardarMatrizPareada request);
+
 	public ResponseGuardarPonderacionEntidad guardarPonderacionEntidad(RequestGuardarPonderacionEntidad request);
+
 	public ResponseResultadoPonderacion resultadoPonderacion(Integer idProyecto);
 }
