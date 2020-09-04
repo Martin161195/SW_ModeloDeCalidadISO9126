@@ -6,105 +6,74 @@
     <title>@ViewData["Title"] - Calidad.WebAdmin</title>
     <link href="~/lib/feather/style.min.css" rel="stylesheet" />
     <link href="~/lib/line-awesome/css/line-awesome.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="//cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css" />
-    <link href="~/css/all-in-one.css" rel="stylesheet" />
+    @*<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />*@
+
+    <link href="~/lib/theme/resources/scss/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/lib/theme/resources/scss/app.min.css" rel="stylesheet" />
+    <link href="~/lib/theme/resources/plugins/datatables/datatables.min.css" rel="stylesheet" />
+    <link href="~/lib/theme/resources/plugins/datatables/dataTables.bootstrap4.min.css" rel="stylesheet" />
+    <link href="~/lib/theme/resources/plugins/select2/select2.min.css" rel="stylesheet" />
+
+    <link href="~/css/site.min.css" rel="stylesheet" />
+
 
     <link rel="stylesheet" href="~/css/site.css" />
 </head>
-<body class="vertical-layout vertical-menu 2-column menu-expanded fixed-navbar"
-      data-open="click" data-menu="vertical-menu" data-col="2-columns">
-    <nav role="navigation" class="header-navbar navbar navbar-with-menu navbar-expand-md fixed-top navbar-semi-dark navbar-shadow navbar-border">
-        <div class="navbar-wrapper">
-            <div class="navbar-header">
-
-            </div>
-            <div class="navbar-container content">
-                <div class="collapse navbar-collapse" id="navbar-mobile">
-                    <ul class="nav navbar-nav mr-auto">
-                        <li class="nav-item d-none d-md-block">
-                            <a class="nav-link nav-menu-main menu-toggle">
-                                <i class="ft-menu"></i>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
+<body >
+    
+    <div class="container">
+        <div class="card">
+            <div class="card-body">
+                @RenderBody()
             </div>
         </div>
-    </nav>
-    <div id="main-menu" data-scroll-to-active="true" class="main-menu menu-light menu-fixed menu-shadow menu-accordion">
-        <!-- main menu header-->
-        <div class="main-menu-header">
-            <input type="text" placeholder="Search" class="menu-search form-control round" />
-        </div>
-        <!-- / main menu header-->
-        <!-- main menu content-->
-        <div class="main-menu-content">
-            <ul id="main-menu-navigation" data-menu="menu-navigation" class="navigation navigation-main">
-                <li class="active">
-                    <a asp-controller="Caracteristicas"><i class="ft-camera-off"></i><span class="menu-title" data-i18n="">Caracteristicas</span></a>
-                </li>
-                <li class=" nav-item">
-                    <a asp-controller="SubCaracteristicas"><i class="ft-align-justify"></i><span class="menu-title" data-i18n="">SubCaracteristicas</span></a>
-                </li>
-                <li class=" nav-item">
-                    <a asp-controller="Metricas"><i class="ft-folder"></i><span class="menu-title" data-i18n="">Métricas</span></a>
-                </li>
-                @*<li class=" nav-item">
-                        <a href="#"><i class="ft-settings"></i><span class="menu-title" data-i18n="">Building Tools</span></a>
-                        <ul class="menu-content">
-                            <li>
-                                <a class="menu-item" href="documentation-grunt.html">Grunt</a>
-                            </li>
-                            <li>
-                                <a class="menu-item" href="documentation-gulp.html">Gulp</a>
-                            </li>
-                        </ul>
-                    </li>*@
-            </ul>
-        </div>
-        <!-- /main menu content-->
-        <!-- main menu footer-->
-        <div class="main-menu-footer footer-close">
-            <div class="text-center">V.1.0.1</div>
-        </div>
-        <!-- main menu footer-->
+       
     </div>
-    <!-- BEGIN Content-->
-    <div class="content modern-content container-fluid">
-        <div class="content-wrapper">
-            <!-- content header-->
-            @*<div class="content-header row">
-                    ...
-                </div>*@
-            <!-- content header-->
-            <!-- content body-->
-            <div class="content-body">
-                <div class="card">
-                    <div class="card-body">
-                        @RenderBody()
-                    </div>
-                </div>
-
-            </div>
-            <!-- content body-->
-
-        </div>
-    </div>
-    <!-- START FOOTER DARK-->
-    <footer class="footer footer-dark">
-        ...
-    </footer>
+                
+    
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/vendor.js"></script>
     <script src="~/lib/modern-admin/js/app-menu.js"></script>
     <script src="~/lib/modern-admin/js/app.js"></script>
     <script src="//cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.21/js/dataTables.bootstrap4.min.js"></script>
+
+    <script src="~/lib/theme/resources/plugins/select2/select2.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
     <script>
         $(document).ready(function () {
-            $('table').DataTable();
+            $("select").select2();
+            $('table').DataTable({
+                language: {
+                    "sProcessing": "Procesando...",
+                    "sLengthMenu": "Mostrar _MENU_ registros",
+                    "sZeroRecords": "No se encontraron resultados",
+                    "sEmptyTable": "Ningún dato disponible en esta tabla",
+                    "sInfo": "Mostrando registros del _START_ al _END_ de un total de _TOTAL_ registros",
+                    "sInfoEmpty": "Mostrando registros del 0 al 0 de un total de 0 registros",
+                    "sInfoFiltered": "(filtrado de un total de _MAX_ registros)",
+                    "sInfoPostFix": "",
+                    "sSearch": "Buscar:",
+                    "sUrl": "",
+                    "sInfoThousands": ",",
+                    "sLoadingRecords": "Cargando...",
+                    "oPaginate": {
+                        "sFirst": "Primero",
+                        "sLast": "Último",
+                        "sNext": "Siguiente",
+                        "sPrevious": "Anterior"
+                    },
+                    "oAria": {
+                        "sSortAscending": ": Activar para ordenar la columna de manera ascendente",
+                        "sSortDescending": ": Activar para ordenar la columna de manera descendente"
+                    },
+                    "buttons": {
+                        "copy": "Copiar",
+                        "colvis": "Visibilidad"
+                    }
+                }
+            });
         });
     </script>
 

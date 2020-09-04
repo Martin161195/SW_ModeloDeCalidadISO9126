@@ -124,7 +124,7 @@ using WebAdmin.Models;
             WriteLiteral("\r\n        </dd>\r\n    </dl>\r\n</div>\r\n<div>\r\n    ");
             EndContext();
             BeginContext(807, 63, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "f22ca0265ecd40a998e3c78547170017", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "6fbfbe03d9b24529946c058f09e20fec", async() => {
                 BeginContext(860, 6, true);
                 WriteLiteral("Editar");
                 EndContext();
@@ -159,7 +159,7 @@ using WebAdmin.Models;
             WriteLiteral(" |\r\n    ");
             EndContext();
             BeginContext(878, 38, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "039ecd760e894667aaad1bb98529ca30", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "fd0bb587ffb74de499fdfa2fb582abc3", async() => {
                 BeginContext(900, 12, true);
                 WriteLiteral("Ir a Listado");
                 EndContext();

@@ -25,6 +25,7 @@ namespace WebAdmin.Models
         public virtual DbSet<Proyecto> Proyecto { get; set; }
         public virtual DbSet<Reporte> Reporte { get; set; }
         public virtual DbSet<Subcaracteristica> Subcaracteristica { get; set; }
+        public virtual DbSet<PonderacionValues> PonderacionValues { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -36,6 +37,11 @@ namespace WebAdmin.Models
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            modelBuilder.Entity<PonderacionValues>(entity =>
+            {
+                
+            });
+
             modelBuilder.Entity<Caracteristica>(entity =>
             {
                 entity.HasKey(e => e.IdCaracteristica);
