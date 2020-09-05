@@ -19,7 +19,7 @@ public class ValorMatriz implements Serializable, Comparable<ValorMatriz> {
 
 	@Override
 	public int compareTo(ValorMatriz matriz) {
-		if (this.getIdx() == matriz.getIdx()) {
+		if (this.getIdx().equals(matriz.getIdx())) {
 			return this.getIdy() < matriz.getIdy() ? -1 : 1;
 		}
 		return this.getIdx() < matriz.getIdx() ? -1 : 1;

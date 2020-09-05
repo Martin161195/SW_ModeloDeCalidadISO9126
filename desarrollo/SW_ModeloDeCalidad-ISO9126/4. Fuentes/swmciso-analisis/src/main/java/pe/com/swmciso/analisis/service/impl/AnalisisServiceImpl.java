@@ -30,16 +30,20 @@ public class AnalisisServiceImpl implements IAnalisisService {
 
 	@Override
 	public ResponsePonderacionEntidades ponderacionEntidades(RequestPonderacionEntidades request) {
+		// CREANDO RESPUESTA
 		ResponsePonderacionEntidades response = new ResponsePonderacionEntidades();
 		List<ResponseGuardarMatrizPareada> matrizPareadaResponseList = new ArrayList<ResponseGuardarMatrizPareada>();
 		List<ResponseGuardarPonderacionEntidad> ponderacionEntidadResponseList = new ArrayList<ResponseGuardarPonderacionEntidad>();
-		List<ValorMatriz> matriz = request.getListMatriz();
-		Integer size = (int) Math.sqrt(matriz.size());
 
-		BigDecimal matrizPareada[][] = new BigDecimal[size][size];
-		BigDecimal matrizResultado[][] = new BigDecimal[size][size];
-		BigDecimal vectorSuma[] = new BigDecimal[size];
-		BigDecimal vectorPromedio[] = new BigDecimal[size];
+		//ALGORITMO
+		List<ValorMatriz> matriz = request.getListMatriz();
+		int size = (int) Math.sqrt(matriz.size());
+
+		BigDecimal[][] matrizPareada = new BigDecimal[size][size];
+		BigDecimal[][] matrizResultado = new BigDecimal[size][size];
+		BigDecimal[] vectorSuma = new BigDecimal[size];
+		BigDecimal[] vectorPromedio = new BigDecimal[size];
+
 		Map<Integer, Integer> treeMapIndex = new TreeMap<Integer, Integer>();
 		Map<Integer, Integer> treeMapId = new TreeMap<Integer, Integer>();
 
@@ -75,12 +79,13 @@ public class AnalisisServiceImpl implements IAnalisisService {
 		for (int i = 0; i < size; i++) {
 			BigDecimal val = new BigDecimal(0);
 			for (int j = 0; j < size; j++) {
-				val.add(matrizPareada[i][j]);
+				val=val.add(matrizPareada[i][j]);
 			}
 			vectorPromedio[i] = val.divide(new BigDecimal(size), 10, RoundingMode.CEILING);
 		}
 
 		for (ValorMatriz valor : matriz) {
+
 			ResponseGuardarMatrizPareada responseMatrizPareada = new ResponseGuardarMatrizPareada();
 			RequestGuardarMatrizPareada requestMatrizPareada = new RequestGuardarMatrizPareada();
 			requestMatrizPareada.setIdEntidadPadre(request.getIdEntidad());
@@ -92,11 +97,15 @@ public class AnalisisServiceImpl implements IAnalisisService {
 
 			responseMatrizPareada = dao.guardarMatrizPareada(requestMatrizPareada);
 			matrizPareadaResponseList.add(responseMatrizPareada);
+
 		}
 
 		for (int i = 0; i < size; i++) {
+
 			ResponseGuardarPonderacionEntidad responsePonderacionEntidad = new ResponseGuardarPonderacionEntidad();
 			RequestGuardarPonderacionEntidad requestPonderacionEntidad = new RequestGuardarPonderacionEntidad();
+
+
 			requestPonderacionEntidad.setIdEntidad(treeMapIndex.get(i));
 			requestPonderacionEntidad.setIdProyecto(request.getIdProyecto());
 			requestPonderacionEntidad.setPonderacion(vectorPromedio[i]);
