@@ -26,12 +26,25 @@ public class LoginController {
 	
 	@PostMapping
 	public ResponseEntity<ResponseLoginBean> validarUsuario2(@RequestBody RequestValidacionBean request) {
-		return ResponseEntity.ok(service.validarUsuario2(request));
+		ResponseLoginBean response = new ResponseLoginBean();
+		response = service.validarUsuario2(request);
+		
+		if(response.getCode() == 0) {
+			return ResponseEntity.ok(response);
+		}
+		return ResponseEntity.notFound().build();
 	}
 	
 	@PostMapping("/validar")
 	public ResponseEntity<ResponseValidacionBean> validarUsuario(@RequestBody RequestValidacionBean request) {
-		return ResponseEntity.ok(service.validarUsuario(request));
+		ResponseValidacionBean response = new ResponseValidacionBean();
+		
+		response = service.validarUsuario(request);
+		
+		if(response.getCode() == 0) {
+			return ResponseEntity.ok(response);
+		}
+		return ResponseEntity.notFound().build();
 	}
 	
 	@PostMapping("/registrar")
