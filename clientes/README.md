@@ -1,1 +1,0 @@
-# SW_ModeloDeCalidadISO9126
