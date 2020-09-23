@@ -1,0 +1,12 @@
+<div class="flex">
+  <textarea
+    class="input"
+    [(ngModel)]="value"
+    [disabled]="disabled"
+    (blur)="_onBlur()"
+    [attr.rows]="rows"
+  ></textarea>
+  <label class="placeholder">
+    {{ label }}&nbsp;
+  </label>
+</div>

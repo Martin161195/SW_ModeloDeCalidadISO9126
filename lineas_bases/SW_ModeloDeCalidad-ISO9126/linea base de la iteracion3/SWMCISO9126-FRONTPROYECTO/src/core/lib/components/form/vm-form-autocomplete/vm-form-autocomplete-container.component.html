@@ -1,0 +1,13 @@
+<div [@fadeInPicker]="'enter'">
+  <ng-container *ngIf="options.length > 0; else notresults">
+    <vm-form-autocomplete-option
+      *ngFor="let option of options; trackBy: trackByFn"
+      (eSelectItem)="handleSelectItem($event)"
+      [option]="option"></vm-form-autocomplete-option>
+  </ng-container>
+  <ng-template #notresults>
+    <div class="g-autocomplete__option">
+      <span class="g-autocomplete__option-text">Sin resultados...</span>
+    </div>
+  </ng-template>
+</div>

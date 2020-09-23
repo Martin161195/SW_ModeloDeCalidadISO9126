@@ -1,0 +1,23 @@
+<div class="current-images">
+  <div class="g-image__list-wrapper">
+    <ng-container *ngIf="images.length; else whitoutimages">
+      <div class="g-image g-image__standar" *ngFor="let img of images; let i = index; trackBy: trackByFn;">
+        <div class="content-img">
+          <figure class="image is-128x128">
+            <img [src]="img">
+          </figure>
+          <div class="content-recursos" *ngIf="!disabled">
+            <div class="btn-close" (click)="removeImage(i)">
+              <fa-icon [icon]="['fas','times']"></fa-icon>
+            </div>
+          </div>
+        </div>
+      </div>
+    </ng-container>
+    <ng-template #whitoutimages>
+      <div class="column">
+        No existen imágenes para mostrar
+      </div>
+    </ng-template>
+  </div>
+</div>

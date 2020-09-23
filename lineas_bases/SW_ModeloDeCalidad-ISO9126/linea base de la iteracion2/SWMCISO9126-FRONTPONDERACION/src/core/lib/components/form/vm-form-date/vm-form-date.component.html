@@ -1,0 +1,32 @@
+<div class="flex">
+  <input
+    class="input"
+    [(ngModel)]="value"
+    type="text"
+    [disabled]="disabled"
+    (blur)="_onBlur()"
+    [owlDateTime]="dt1"
+    [selectMode]="selectMode"
+    [owlDateTimeTrigger]="dt1"
+    [min]="min"
+    [max]="max"
+  >
+  <label class="placeholder">
+    {{ label }}&nbsp;
+  </label>
+  <owl-date-time
+    #dt1
+    [firstDayOfWeek]="firstDayOfWeek"
+    [pickerType]="pickerType"
+    [startView]="startView"
+    [startAt]="startAt"
+  ></owl-date-time>
+  <span class="icon" [owlDateTimeTrigger]="dt1">
+    <ng-container *ngIf="pickerType !== 'timer'">
+      <fa-icon [icon]="['far','calendar-alt']"></fa-icon>
+    </ng-container>
+    <ng-container *ngIf="pickerType === 'timer'">
+      <fa-icon [icon]="['far','clock']"></fa-icon>
+    </ng-container>
+  </span>
+</div>

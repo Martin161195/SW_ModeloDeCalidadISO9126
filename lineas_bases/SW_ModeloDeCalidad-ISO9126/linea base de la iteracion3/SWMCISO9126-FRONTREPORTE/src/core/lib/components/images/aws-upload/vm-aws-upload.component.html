@@ -1,0 +1,10 @@
+<ng-container *ngIf="events.length > 0">
+  <div class="g-aws__title">
+    Subiendo Imágenes
+  </div>
+  <vm-progress-bar>
+    <ng-container *ngFor="let event of events; trackBy: trackByFn;">
+      <vm-single-bar [label]="event.message" [percent]="event.percent"></vm-single-bar>
+    </ng-container>
+  </vm-progress-bar>
+</ng-container>

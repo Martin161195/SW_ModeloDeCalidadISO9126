@@ -1,0 +1,21 @@
+<div class="flex">
+  <input
+    class="input"
+    type="text"
+    [(ngModel)]="value"
+    (blur)="_onBlur()"
+    (eConfirmSelected)="handleConfirmSelected($event)"
+    [disabled]="disabled"
+    [readOnly]="readOnly"
+    [vmFormAutocomplete]="ac"
+    [vmFormAutocompleteTrigger]="ac"
+  >
+  <label class="placeholder">
+    {{ label }}&nbsp;
+  </label>
+  <span class="icon" *ngIf="loading">
+    <fa-icon [icon]="['fas','spinner']"  [spin]="loading"></fa-icon>
+  </span>
+  <vm-form-autocomplete [options]="options" (afterPickerClosed)="handleClosePicker($event)" #ac>
+  </vm-form-autocomplete>
+</div>

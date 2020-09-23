@@ -1,0 +1,54 @@
+<div class="g-navigation--container">
+  <div class="g-navigation--container__breadcrumb">
+    <div class="g-navigation--icon br" (click)="back()">
+      <fa-icon [icon]="['fas','arrow-left']"></fa-icon>
+    </div>
+    <ng-container *ngIf="!items; else whititems">
+      <div class="g-navigation--breadcrumb">
+        <nav>
+          <ol>
+            <li *ngFor="let crumb of crumbs; let last = last; trackBy: trackByFn" [ngClass]="{'separator': !crumb.path}">
+              <ng-container *ngIf="last; else notlast">
+                <p>{{ crumb.text }}</p>
+              </ng-container>
+              <ng-template #notlast>
+                <ng-container *ngIf="!crumb.path, else withpath">
+                  {{ crumb.text }}
+                </ng-container>
+                <ng-template #withpath>
+                  <a [routerLink]="crumb.path">
+                    {{ crumb.text }}
+                  </a>
+                </ng-template>
+              </ng-template>
+            </li>
+          </ol>
+        </nav>
+      </div>
+    </ng-container>
+    <ng-template #whititems>
+      <div class="g-navigation-container--tab">
+        <div class="g-navigation--tab">
+          <div class="g-navigation--tab__list">
+            <div class="g-navigation--tab__list--labels">
+              <a
+                class="g-navigation--tab__label"
+                *ngFor="let item of items; trackBy: trackByFn"
+                [routerLink]="[item.path]"
+                [routerLinkActive]="'active'">
+                {{ item.name }}
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </ng-template>
+  </div>
+  <!-- <div
+    class="g-navigation--icon bl"
+    (click)="refresh()"
+    *ngIf="!isAsync"
+    vmTooltip="Recargar todos los Modulos">
+    <fa-icon [icon]="['fas','sync']"  [spin]="isRefresh$ | async"></fa-icon>
+  </div> -->
+</div>

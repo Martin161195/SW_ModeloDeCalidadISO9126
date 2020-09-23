@@ -1,0 +1,54 @@
+<div class="g-auth">
+  <form class="g-auth__box" [formGroup]="formCreate">
+    <div class="g-auth__box--content">
+      <vm-form-group>
+        <vm-form-input [formControl]="firstName" [label]="'Nombres'"></vm-form-input>
+        <vm-form-error [control]="firstName"></vm-form-error>
+      </vm-form-group>
+      <vm-form-group>
+        <vm-form-input [formControl]="lastName" [label]="'Apellidos'"></vm-form-input>
+        <vm-form-error [control]="lastName"></vm-form-error>
+      </vm-form-group>
+      <vm-form-group>
+        <vm-form-input [formControl]="email" [label]="'Correo Electrónico Personal'"></vm-form-input>
+        <vm-form-error [control]="email"></vm-form-error>
+      </vm-form-group>
+      <vm-form-group>
+        <vm-form-input [formControl]="nameLocal" [label]="'Nombre de la empresa'"></vm-form-input>
+        <vm-form-error [control]="nameLocal"></vm-form-error>
+      </vm-form-group>
+      <vm-form-group>
+        <vm-form-input [formControl]="phone" [label]="'Username'"></vm-form-input>
+        <vm-form-error [control]="phone"></vm-form-error>
+      </vm-form-group>
+      <vm-form-group>
+        <vm-form-input [type]="'password'" [formControl]="password" [label]="'Contraseña'"></vm-form-input>
+        <vm-form-error [control]="password"></vm-form-error>
+      </vm-form-group>
+      <vm-form-group>
+        <vm-form-input [type]="'password'" [formControl]="repeatPassword" [label]="'Repita su Contraseña'">
+        </vm-form-input>
+        <vm-form-error [control]="repeatPassword"></vm-form-error>
+      </vm-form-group>
+      <vm-form-group>
+        <vm-form-checkbox [formControl]="check"
+          [label]="'Al registrarme acepto los terminos y condiciones de la empresa.'"></vm-form-checkbox>
+        <vm-form-error [control]="check"></vm-form-error>
+      </vm-form-group>
+    </div>
+    <div class="g-auth__box--footer">
+      <vm-button [text]="'Registrate'" [btnTheme]="'primary'" [btnIsLoading]="loading$ | async"
+        [btnFullWidthClass]="true" (eventClick)="onSubmit()">
+      </vm-button>
+      <div class="g-line__separate">
+        <div class="g-line__separate--line"></div>
+      </div>
+      <div class="g-text__center">
+        ¿Ya tienes una cuenta?
+        <span [routerLink]="['/auth/login']">
+          <a>Inicia Sesión</a>
+        </span>
+      </div>
+    </div>
+  </form>
+</div>

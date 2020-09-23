@@ -1,0 +1,88 @@
+.g-pagination
+  margin-top: 0
+  display: flex
+  justify-content: space-between
+  flex-direction: column
+
+  @media screen and (min-width: $break-medium)
+    flex-direction: row
+
+  .g-pagination__nav
+    margin: 0
+    padding: 20px 0 0
+    display: flex
+    align-items: flex-end
+
+    >li
+      padding: 0
+      margin-right: 5px
+      display: inline-block
+
+      >.g-pagination__link
+        color: $color-pagination
+        cursor: pointer
+        display: inline-block
+        height: 2.25rem
+        min-width: 2.25rem
+        vertical-align: middle
+        padding: .5rem
+        border-radius: 50%
+        text-align: center
+        position: relative
+        display: flex
+        justify-content: center
+        align-items: center
+        font-size: 1rem
+        line-height: 1rem
+        font-weight: 400
+
+        &:hover
+          color: $white
+          background: $orange
+
+        &--first.g-pagination__link,
+        &--prev.g-pagination__link,
+        &--next.g-pagination__link,
+        &--last.g-pagination__link
+          background: $background-pagination-link
+
+          &:hover
+            color: $white
+            background: $orange
+
+        &--active.g-pagination__link
+          color: $white
+          background: $orange
+
+        &--disabled.g-pagination__link,
+        &--disabled:hover.g-pagination__link
+          color: $color-pagination-disabled
+          background: $background-pagination-link
+          opacity: .3
+
+
+
+
+  .g-pagination__info
+    display: inline-flex
+    align-items: flex-end
+    margin: 0
+    padding: 0
+
+    .g-pagination__info--select
+      margin-right: 10px
+
+    .g-pagination__info--text
+      padding: 0
+
+  &.loading
+    cursor: wait
+
+    .g-pagination__nav
+
+      >li
+
+        >.g-pagination__link
+          cursor: wait !important
+          pointer-events: none !important
+

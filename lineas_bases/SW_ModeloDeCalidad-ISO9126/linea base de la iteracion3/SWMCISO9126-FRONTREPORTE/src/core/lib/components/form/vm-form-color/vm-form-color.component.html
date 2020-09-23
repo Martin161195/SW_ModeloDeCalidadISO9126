@@ -1,0 +1,19 @@
+<div class="flex">
+  <ng-container *ngIf="value">
+    <div class="form-color--view" [style.background]="value"></div>
+  </ng-container>
+  <input
+    class="input"
+    type="text"
+    autocomplete="new-password"
+    [cpPosition]="cpPosition"
+    [(colorPicker)]="value"
+    (colorPickerOpen)="_colorPickerOpenEvent()"
+    (colorPickerClose)="_colorPickerCloseEvent()"
+    [disabled]="disabled"
+    (blur)="_onBlur()"
+  >
+  <label class="placeholder">
+    {{ label }}&nbsp;
+  </label>
+</div>

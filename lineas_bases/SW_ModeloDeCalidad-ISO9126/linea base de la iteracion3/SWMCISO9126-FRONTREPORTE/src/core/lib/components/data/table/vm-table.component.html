@@ -1,0 +1,112 @@
+<div class="g-datatable" [ngClass]="btnThemeClass" simplebar #sp1="simplebar">
+  <table class="g-table"
+    [ngClass]="{'g-table--loading': loading}"
+    [ngStyle]="{'width': (!widthTable ? 'auto' : (widthTable + 'px')) }"
+  >
+    <ng-container *ngIf="!!data.length else notresults">
+      <thead class="g-table__head">
+        <tr class="g-table__row">
+          <th class="g-table__cell"
+            *ngFor="let col of buffCols; trackBy: trackByFn"
+            [ngStyle]="{'width': (col.width ? (col.width + 'px') : 'auto') }"
+            [ngClass]="{'g-table__cell--sort': !!col.sort}"
+            (click)="sortBy(col.data.key, col.sort)">
+            <span [ngStyle]="{'width': (col.width ? ((col.width - 20) + 'px') : 'auto') }">
+              {{ col.data.name }}
+              <ng-container *ngIf="col.sort">
+                <span class="icon" *ngIf="col.sort.order === 'ASC'">
+                  <fa-icon vmTooltip="Orden Ascendente" [icon]="['fas','sort-up']"></fa-icon>
+                </span>
+                <span class="icon" *ngIf="col.sort.order === 'DESC'">
+                  <fa-icon vmTooltip="Orden Descendente" [icon]="['fas','sort-down']"></fa-icon>
+                </span>
+                <span class="icon" *ngIf="!col.sort.order">
+                  <fa-icon vmTooltip="Ordenar" [icon]="['fas','sort']"></fa-icon>
+                </span>
+              </ng-container>
+            </span>
+          </th>
+          <th *ngIf="withActions" class="g-table__cell g-table__cell--center" [ngStyle]="{'width': (!isContentForTable ? (widthForActions + 'px') : 'auto') }">
+            <span [ngStyle]="{'width': (!isContentForTable ? ((widthForActions - 20) + 'px') : 'auto') }">
+              Acciones
+            </span>
+          </th>
+        </tr>
+      </thead>
+      <tbody class="g-table__body" simplebar #sp2="simplebar" [ngStyle]="{'width': (widthTableBody + 'px')}">
+        <tr class="g-table__row" *ngFor="let row of data; trackBy: trackByFn">
+          <td class="g-table__cell"
+            [ngStyle]="{'width': (col.width ? (col.width + 'px') : 'auto') }"
+            *ngFor="let col of buffCols; trackBy: trackByFn">
+            <span [ngStyle]="{'width': (col.width ? ((col.width - 20) + 'px') : 'auto')}">
+              <ng-container *ngIf="!col.data.isChip else chip">
+                <ng-container *ngIf="!col.data.isDate else date">
+                  <ng-container *ngIf="!col.data.isPrice else price">
+                    {{ row[col.data.key] }}
+                  </ng-container>
+                  <ng-template #price>
+                    {{ row[col.data.isPrice.currency] }} {{ row[col.data.key] | number: '1.2-2' }}
+                  </ng-template>
+                </ng-container>
+                <ng-template #date>
+                  {{ row[col.data.key] | date: 'dd/MM/yy hh:mm a' }}
+                </ng-template>
+              </ng-container>
+              <ng-template #chip>
+                <vm-chip [chipTheme]="col.data.isChip(row[col.data.key])" [text]="row[col.data.key]"></vm-chip>
+              </ng-template>
+            </span>
+          </td>
+          <td *ngIf="withActions" class="g-table__cell g-table__cell--center" [ngStyle]="{'width': (!isContentForTable ? (widthForActions + 'px') : 'auto') }">
+            <span class="g-table__action" [ngStyle]="{'width': (!isContentForTable ? ((widthForActions - 20) + 'px') : 'auto') }">
+              <ng-container *ngIf="withActionCalendar">
+                <a class="purple" vmTooltip="Ver calendario" (click)="clickCalendar(row)">
+                  <fa-icon [icon]="['far','calendar-alt']"></fa-icon>
+                </a>
+              </ng-container>
+              <ng-container *ngIf="withActionDetail">
+                <a class="accent" vmTooltip="Ver detalle" (click)="clickDetail(row)">
+                  <fa-icon [icon]="['far','eye']"></fa-icon>
+                </a>
+              </ng-container>
+              <ng-container *ngIf="withActionEdit">
+                <a class="accent" vmTooltip="Editar" (click)="clickEdit(row)">
+                  <fa-icon [icon]="['far','edit']"></fa-icon>
+                </a>
+              </ng-container>
+              <ng-container *ngIf="withActionDelete">
+                <a class="danger" vmTooltip="Eliminar" (click)="clickDelete(row)">
+                  <fa-icon [icon]="['far','trash-alt']"></fa-icon>
+                </a>
+              </ng-container>
+              <ng-container *ngIf="withActionHistory">
+                <a class="purple" vmTooltip="Historial" (click)="clickHistory(row)">
+                  <fa-icon [icon]="['fas','history']"></fa-icon>
+                </a>
+              </ng-container>
+            </span>
+          </td>
+        </tr>
+      </tbody>
+    </ng-container>
+    <ng-template #notresults>
+      <tbody class="g-table__body">
+        <tr style="width: 100%; height: 100%; display: table;">
+          <td style="display: table-cell; vertical-align: middle; text-align: center;">
+            Sin resultados para mostrar
+          </td>
+        </tr>
+      </tbody>
+    </ng-template>
+  </table>
+
+  <div class="g-table__loader" [ngClass]="{'g-table__loader--nop': loadEvent}" *ngIf="loadEvent || loading">
+    <div class="g-table__loading">
+      <span>Cargando...</span>
+      <span>
+        <div class="g-loader g-loader--primary g-loader--lg"></div>
+      </span>
+    </div>
+  </div>
+
+</div>

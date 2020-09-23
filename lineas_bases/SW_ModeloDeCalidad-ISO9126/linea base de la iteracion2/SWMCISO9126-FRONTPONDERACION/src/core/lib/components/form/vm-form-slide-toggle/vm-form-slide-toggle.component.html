@@ -1,0 +1,46 @@
+<label [attr.for]="inputId" class="vm-slide-toggle-label" #label>
+  <div
+    #toggleBar
+    class="vm-slide-toggle-bar"
+    [class.vm-slide-toggle-bar-no-side-margin]="!labelContent.textContent || !labelContent.textContent.trim()">
+
+    <input
+      #input
+      class="vm-slide-toggle-input cdk-visually-hidden"
+      type="checkbox"
+      role="switch"
+      [id]="inputId"
+      [required]="required"
+      [tabIndex]="tabIndex"
+      [checked]="checked"
+      [disabled]="disabled"
+      [attr.name]="name"
+      [attr.aria-checked]="checked"
+      [attr.aria-label]="ariaLabel"
+      [attr.aria-labelledby]="ariaLabelledby"
+      (change)="_onChangeEvent($event)"
+      (click)="_onInputClick($event)">
+
+    <div
+      class="vm-slide-toggle-thumb-container"
+      #thumbContainer>
+
+      <div class="vm-slide-toggle-thumb"></div>
+      <div class="vm-slide-toggle-ripple" vm-ripple
+           [vmRippleTrigger]="label"
+           [vmRippleDisabled]="disabled"
+           [vmRippleCentered]="true"
+           [vmRippleRadius]="20"
+           [vmRippleAnimation]="{enterDuration: 150}">
+        <div class="vm-ripple-element vm-slide-toggle-persistent-ripple"></div>
+      </div>
+    </div>
+
+  </div>
+
+  <span class="vm-slide-toggle-content" #labelContent (cdkObserveContent)="_onLabelTextChange()">
+    <!-- Add an invisible span so JAWS can read the label -->
+    <span style="display:none">&nbsp;</span>
+    <ng-content></ng-content>
+  </span>
+</label>

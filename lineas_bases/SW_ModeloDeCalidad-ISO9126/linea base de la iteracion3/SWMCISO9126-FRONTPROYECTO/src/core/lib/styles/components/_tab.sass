@@ -1,0 +1,49 @@
+.g-tab
+  display: flex
+  flex-grow: 1
+  overflow: hidden
+  background: inherit
+
+  .g-tab__list
+    width: 100%
+    flex-grow: 1
+    position: relative
+    border-bottom: 1px solid rgba(0,0,0,.12)
+
+    .g-tab__list--labels
+      display: flex
+      // flex-wrap: wrap
+
+.g-tab__label
+  height: 3rem
+  cursor: pointer
+  box-sizing: border-box
+  text-align: center
+  display: inline-flex
+  justify-content: center
+  align-items: center
+  white-space: nowrap
+  outline: 0
+  position: relative
+  color: rgba(0,0,0,.6)
+  padding: 0.1rem
+  transition: background .5s ease
+  width: 100%
+
+  &:hover
+    background-color: rgba(63,81,181,.1)
+
+  &.active
+    border-bottom: 1px solid $orange
+    color: $orange
+
+  &.is-small
+    height: 2.5rem
+    font-size: 0.8rem
+
+  &.is-6
+    width: 50%
+
+  &.is-2
+    width: 20%
+

@@ -1,0 +1,33 @@
+$vm-tooltip-horizontal-padding: 8px
+$vm-tooltip-max-width: 250px
+$vm-tooltip-margin: 14px
+
+$vm-tooltip-handset-horizontal-padding: 16px
+$vm-tooltip-handset-margin: 24px
+
+.vm-tooltip-panel
+  // The overlay reference updates the pointer-events style property directly on the HTMLElement
+  // depending on the state of the overlay. For tooltips the overlay panel should never enable
+  // pointer events. To overwrite the inline CSS from the overlay reference `!important` is needed.
+  pointer-events: none !important
+
+
+.vm-tooltip
+  color: white
+  border-radius: 4px
+  margin: $vm-tooltip-margin
+  max-width: $vm-tooltip-max-width
+  padding-left: $vm-tooltip-horizontal-padding
+  padding-right: $vm-tooltip-horizontal-padding
+  overflow: hidden
+  text-overflow: ellipsis
+  background: rgba(97,97,97,.9)
+  font-family: BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif
+  font-size: 12px
+  padding-top: 6px
+  padding-bottom: 6px
+
+.vm-tooltip-handset
+  margin: $vm-tooltip-handset-margin
+  padding-left: $vm-tooltip-handset-horizontal-padding
+  padding-right: $vm-tooltip-handset-horizontal-padding

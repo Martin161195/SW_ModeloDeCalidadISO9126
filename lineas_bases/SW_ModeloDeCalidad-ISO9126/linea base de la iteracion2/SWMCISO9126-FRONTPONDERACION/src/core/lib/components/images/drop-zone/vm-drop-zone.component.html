@@ -1,0 +1,47 @@
+<div class="g-drop__zone">
+  <div class="g-drop__zone--title">
+    Imágenes
+  </div>
+  <div
+    *ngIf="!disabled"
+    class="g-drop__zone--content"
+    VMDropFiles
+    [class.g-drop__zone--content-enter]="enterBox"
+    (fileUpload)="getImages($event)"
+    (enter)="enter($event)">
+    <div class="g-drop__zone--images">
+      <div class="g-image__list-wrapper">
+        <div
+          class="g-image g-image__standar"
+          *ngFor="let file of files; let i = index; trackBy: trackByFn;"
+          >
+          <div class="content-img">
+            <figure class="image is-128x128">
+              <img [src]="file.url">
+            </figure>
+            <div class="content-recursos">
+              <div class="size">{{ file.unit.size }} {{ file.unit.unity }}</div>
+              <div class="btn-close" (click)="removeFile(i)">
+                <fa-icon [icon]="['fas','times']"></fa-icon>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="g-drop__zone--recursos">
+      <div class="g-drop__zone--icon">
+        <fa-icon [icon]="['fas','cloud-upload-alt']"></fa-icon>
+      </div>
+      <div class="g-drop__zone--caption">
+        Arrastra y suelta tus imágenes
+      </div>
+      <div class="g-drop__zone--input">
+        <span class="g-btn g-btn--info btn-file">
+          <span>Subir imágenes</span>
+          <input multiple="" name="files[]" type="file">
+        </span>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,39 @@
+<div class="g-auth">
+  <form class="g-auth__box" [formGroup]="formCreate">
+    <div class="g-auth__box--header">
+      <figure style="margin: auto" class="image is-128x128">
+        <img class="is-rounded" src="assets/img/logo_vm_circle.png">
+      </figure>
+      <!-- <div class="g-auth__header--title">
+        Iniciar Sesión
+      </div> -->
+    </div>
+    <div class="g-auth__box--content">
+      <vm-form-group>
+        <vm-form-input [formControl]="email" [label]="'Usuario'"></vm-form-input>
+        <vm-form-error [control]="email"></vm-form-error>
+      </vm-form-group>
+      <vm-form-group>
+        <vm-form-input [type]="'password'" [formControl]="password" [label]="'Contraseña'"></vm-form-input>
+        <vm-form-error [control]="password"></vm-form-error>
+      </vm-form-group>
+    </div>
+    <div class="g-auth__box--footer">
+      <vm-button [type]="'submit'" [text]="'Inicia Sesión'" [btnTheme]="'primary'" [btnIsLoading]="loading$ | async"
+        [btnFullWidthClass]="true" (eventClick)="onSubmit()">
+      </vm-button>
+      <div class="g-auth__pwd g-text__center">
+        <a>¿Olvidaste tu contraseña?</a>
+      </div>
+      <div class="g-line__separate">
+        <div class="g-line__separate--line"></div>
+      </div>
+      <div class="g-text__center">
+        ¿No tienes una cuenta?
+        <span>
+          <a [routerLink]="['/auth/signin']">Regístrate</a>
+        </span>
+      </div>
+    </div>
+  </form>
+</div>

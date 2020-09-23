@@ -1,0 +1,13 @@
+<div class="g-alert__content"
+  [ngClass]="{
+    'g-alert__content--small': (size === 'small'),
+    'g-alert__content--medium': (size === 'medium'),
+    'g-alert__content--large': (size === 'large')
+  }"
+  [@closeOpenContent]="alertContentAnimation"
+>
+  <ng-content></ng-content>
+  <vm-alert-loader *ngIf="loading">
+    <vm-spinner-material></vm-spinner-material>
+  </vm-alert-loader>
+</div>

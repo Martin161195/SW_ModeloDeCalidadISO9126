@@ -1,0 +1,147 @@
+.vm-slide-toggle
+  display: inline-block
+  height: 24px
+  max-width: 100%
+  line-height: 24px
+  white-space: nowrap
+  outline: 0
+  user-select: none
+  -webkit-tap-highlight-color: transparent
+
+  .vm-slide-toggle-ripple
+    position: absolute
+    top: calc(50% - 20px)
+    left: calc(50% - 20px)
+    height: 40px
+    width: 40px
+    z-index: 1
+    pointer-events: none
+
+    .vm-ripple-element:not(.vm-slide-toggle-persistent-ripple)
+      // Although the specs describe an opacity of 16% for ripples if the slide-toggle is being
+      // pressed, we need to reduce the opacity a bit because besides the transient ripples,
+      // the persistent ripple will still show up and blend with the transient ripple.
+      opacity: 0.12
+
+  &.vm-checked
+    .vm-slide-toggle-thumb
+      background-color: $orange
+
+    .vm-slide-toggle-bar
+      @include background-opacity($orange,0.54)
+
+    .vm-ripple-element
+      background-color: $orange
+
+  &:not(.vm-checked) .vm-ripple-element
+    background-color: #000000
+
+  &.vm-disabled
+    opacity: .38
+
+    .vm-slide-toggle-label
+      cursor: default
+
+    .vm-slide-toggle-thumb-container
+      cursor: default
+
+  .vm-slide-toggle-label
+    display: flex
+    flex: 1
+    flex-direction: row
+    align-items: center
+    height: inherit
+    cursor: pointer
+
+    .vm-slide-toggle-input
+      bottom: 0
+      left: 10px
+      border: 0
+      clip: rect(0 0 0 0)
+      height: 1px
+      margin: -1px
+      overflow: hidden
+      padding: 0
+      position: absolute
+      width: 1px
+      outline: 0
+
+    .vm-slide-toggle-content
+      white-space: nowrap
+      overflow: hidden
+      text-overflow: ellipsis
+
+  &.vm-checked
+
+    .vm-slide-toggle-thumb-container
+      transform: translate3d(16px,0,0)
+
+      [dir='rtl'] &
+        transform: translate3d(--16px, 0, 0)
+
+.vm-slide-toggle-bar
+  background-color: rgba(0,0,0,.38)
+  position: relative
+  width: 36px
+  height: 14px
+  flex-shrink: 0
+  border-radius: 8px
+
+.vm-slide-toggle-bar, [dir=rtl] .vm-slide-toggle-label-before .vm-slide-toggle-bar
+  margin-right: 8px
+  margin-left: 0
+
+.vm-slide-toggle-bar, .vm-slide-toggle-thumb
+  transition: all 80ms linear
+  transition-property: background-color
+  transition-delay: 50ms
+
+.vm-slide-toggle-thumb-container
+  position: absolute
+  z-index: 1
+  width: 20px
+  height: 20px
+  top: -3px
+  left: 0
+  transform: translate3d(0,0,0)
+  transition: all 80ms linear
+  transition-property: transform
+  cursor: grab
+
+  .vm-slide-toggle-thumb
+    box-shadow: 0 2px 1px -1px rgba(0,0,0,.2), 0 1px 1px 0 rgba(0,0,0,.14), 0 1px 3px 0 rgba(0,0,0,.12)
+    background-color: #fafafa
+    height: 20px
+    width: 20px
+    border-radius: 50%
+    transition: all 80ms linear
+    transition-property: background-color
+    transition-delay: 50ms
+
+
+
+.vm-slide-toggle-persistent-ripple
+  width: 100%
+  height: 100%
+  transform: none
+
+  .vm-slide-toggle-bar:hover &
+    opacity: 0.04
+
+  // As per specifications, the focus ripple should only show up if the slide-toggle has
+  // been focused through keyboard. We cannot account for `cdk-program-focused` because clicking
+  // on the label causes the focus origin to be `program` due to the focus redirection.
+  .vm-slide-toggle:not(.vm-disabled).cdk-keyboard-focused &
+    opacity: 0.12
+
+  // We do this here, rather than having a `:not(.mat-slide-toggle-disabled)`
+  // above in the `:hover`, because the `:not` will bump the specificity
+  // a lot and will cause it to overide the focus styles.
+  &, .vm-slide-toggle.vm-disabled .vm-slide-toggle-bar:hover &
+    opacity: 0
+
+  @media (hover: none)
+    // Note that we only negate the `:hover` rather than setting it to always be `display: none`,
+    // in order to maintain the focus indication for hybrid touch + keyboard devices.
+    .vm-slide-toggle-bar:hover &
+      display: none

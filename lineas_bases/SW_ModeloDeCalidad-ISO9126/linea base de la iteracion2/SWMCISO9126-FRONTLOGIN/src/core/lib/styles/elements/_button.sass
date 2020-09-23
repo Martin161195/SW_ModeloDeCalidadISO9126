@@ -1,0 +1,297 @@
+// Button configuration
+$border-color-secondary-button: $primary
+
+@keyframes spinAround
+  from
+    transform: rotate(0deg)
+  to
+    transform: rotate(359deg)
+
+.g-btn
+  display: inline-block
+  font-weight: 400
+  text-align: center
+  white-space: nowrap
+  vertical-align: middle
+  user-select: none
+  border: 1px solid transparent
+  padding: .72rem 1.02rem
+  font-size: 1rem
+  line-height: 1.25
+  border-radius: .25rem
+  transition: color 0.15s ease-in-out,background-color 0.15s ease-in-out,border-color 0.15s ease-in-out,box-shadow 0.15s ease-in-out,-webkit-box-shadow 0.15s ease-in-out
+  box-shadow: 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12)
+  cursor: pointer
+  color: $text-light
+
+  &.g-btn--small
+    font-size: .8rem
+    line-height: 1
+    padding: 0.576rem 0.816rem
+
+  &:focus
+    outline: none
+
+  &.g-btn--pill
+    border-radius: 60px
+
+  &.g-btn--icon
+
+    span
+      padding-right: .3rem
+
+  &.g-btn--fullwidth
+    width: 100%
+
+  &.g-btn--primary, &.g-btn--brand
+    background: $primary
+    border-color: $primary
+    color: $white
+
+    &:hover, &.active
+      background: darken($primary,6%)
+
+  &.g-btn--secondary, &.g-btn--default
+    background: $white
+    border-color: $border-color-secondary-button
+    box-shadow: none
+
+    &:hover
+      background: darken($white,6%)
+
+  &.g-btn--accent
+    background: $accent
+    border-color: $accent
+    color: $white
+
+    &:hover, &.active
+      background: darken($accent,6%)
+
+  &.g-btn--danger
+    background: $danger
+    border-color: $danger
+    color: $white
+
+    &:hover, &.active
+      background: darken($danger,6%)
+
+  &.g-btn--dark
+    background: $dark
+    border-color: $dark
+    color: $white
+
+    &:hover, &.active
+      background: darken($dark,6%)
+
+  &.g-btn--info
+    background: $info
+    border-color: $info
+    color: $white
+
+    &:hover, &.active
+      background: darken($info,6%)
+
+  &.g-btn--metal
+    background: $metal
+    border-color: $metal
+    color: $white
+
+    &:hover, &.active
+      background: darken($metal,6%)
+
+  &.g-btn--orange
+    background: $orange
+    border-color: $orange
+    color: $white
+
+    &:hover, &.active
+      background: darken($orange,6%)
+
+  &.g-btn--purple
+    background: $purple
+    border-color: $purple
+    color: $white
+
+    &:hover, &.active
+      background: darken($purple,6%)
+
+  &.g-btn--success
+    background: $success
+    border-color: $success
+    color: $white
+
+    &:hover, &.active
+      background: darken($success,6%)
+
+  &.g-btn--transparent
+    background: transparent
+    border-color: transparent
+    color: inherit
+    box-shadow: none !important
+
+    &:hover, &.active
+      background: transparent
+      box-shadow: none !important
+
+  &.g-btn--outline-primary, &.g-btn--outline-brand
+    background: transparent
+    border-color: $primary
+    color: $primary
+    box-shadow: none !important
+
+    &:hover, &.active
+      background: $primary
+      color: $white
+
+  &.g-btn--outline-danger
+    background: transparent
+    border-color: $danger
+    color: $danger
+    box-shadow: none !important
+
+    &:hover, &.active
+      background: $danger
+      color: $white
+
+  &.g-btn--outline-dark
+    background: transparent
+    border-color: $dark
+    color: $dark
+    box-shadow: none !important
+
+    &:hover, &.active
+      background: $dark
+      color: $white
+
+  &.g-btn--outline-info
+    background: transparent
+    border-color: $info
+    color: $info
+    box-shadow: none !important
+
+    &:hover, &.active
+      background: $info
+      color: $white
+
+  &.g-btn--outline-metal
+    background: transparent
+    border-color: $metal
+    color: $metal
+    box-shadow: none !important
+
+    &:hover, &.active
+      background: $metal
+      color: $white
+
+  &.g-btn--outline-orange
+    background: transparent
+    border-color: $orange
+    color: $orange
+    box-shadow: none !important
+
+    &:hover, &.active
+      background: $orange
+      color: $white
+
+  &.g-btn--outline-purple
+    background: transparent
+    border-color: $purple
+    color: $purple
+    box-shadow: none !important
+
+    &:hover, &.active
+      background: $purple
+      color: $white
+
+  &.g-btn--outline-success
+    background: transparent
+    border-color: $success
+    color: $success
+    box-shadow: none !important
+
+    &:hover, &.active
+      background: $success
+      color: $white
+
+  &.g-btn--outline-secondary
+    background: white
+    border-color: $border-color-secondary-button
+    color: $primary
+    box-shadow: none !important
+
+    &:hover
+      background: darken(white,6%)
+
+  &.g-btn--onlyicon
+    padding: 0
+    position: relative
+    display: inline-flex
+    width: 43px
+    height: 43px
+    align-items: center
+    justify-content: center
+    border-radius: 50%
+    box-shadow: 0 3px 5px -1px rgba(0,0,0,.2), 0 6px 10px 0 rgba(0,0,0,.14), 0 1px 18px 0 rgba(0,0,0,.12)
+
+    span
+      padding: 0 !important
+
+  &.g-btn--loading
+    color: transparent
+    pointer-events: none
+    position: relative
+
+    &:after
+      animation: spinAround 500ms infinite linear !important
+      border: 2px solid $white
+      border-radius: 290486px
+      border-right-color: transparent
+      border-top-color: transparent
+      content: ""
+      display: block
+      height: 1.5rem
+      width: 1.5rem
+      position: absolute
+      left: calc(50% - (1.5rem / 2))
+      top: calc(50% - (1.5rem / 2))
+
+    &.g-btn--secondary, &.g-btn--default
+      &:after
+        border-color: $border-color-secondary-button
+
+  &.g-btn--disabled
+    pointer-events: none !important
+    cursor: not-allowed !important
+    background: $default !important
+    border-color: $default !important
+    color: $text !important
+    opacity: .7 !important
+
+.g-btn--grouped
+  border: 1px solid transparent
+  transition: color 0.15s ease-in-out,background-color 0.15s ease-in-out,border-color 0.15s ease-in-out,box-shadow 0.15s ease-in-out,-webkit-box-shadow 0.15s ease-in-out
+  box-shadow: 0 3px 1px -2px transparent, 0 2px 2px 0 transparent, 0 1px 5px 0 transparent
+
+  .g-btn + .g-btn
+    border-left: 1px solid rgba(0, 0, 0, 0.12)
+
+  .g-btn
+    box-shadow: none
+    border-radius: 0
+    border: none
+
+    &:first-child
+      border-top-left-radius: .25rem
+      border-bottom-left-radius: .25rem
+
+      &.g-btn--pill
+        border-top-left-radius: 60px
+        border-bottom-left-radius: 60px
+
+    &:last-child
+      border-top-right-radius: .25rem
+      border-bottom-right-radius: .25rem
+
+      &.g-btn--pill
+        border-top-right-radius: 60px
+        border-bottom-right-radius: 60px

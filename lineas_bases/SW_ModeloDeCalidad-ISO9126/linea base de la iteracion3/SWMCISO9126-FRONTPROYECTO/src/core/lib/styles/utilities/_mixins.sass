@@ -1,0 +1,34 @@
+// Responsiveness
+
+=mobile
+  @media screen and (max-width: $break-small)
+    @content
+
+=tablet
+  @media screen and (min-width: $break-small + 1px), print
+    @content
+
+=tablet-only
+  @media screen and (min-width: $break-small + 1px) and (max-width: $break-large)
+    @content
+
+=touch
+  @media screen and (max-width: $break-large - 1px)
+    @content
+
+=desktop
+  @media screen and (min-width: $break-large + 1px)
+    @content
+
+// Modals
+=is-small
+  @media screen and (min-width: $break-medium + 1px)
+    @content
+
+=is-medium
+  @media screen and (min-width: $break-large + 1px)
+    @content
+
+=is-large
+  @media screen and (min-width: $break-xlarge + 1px)
+    @content

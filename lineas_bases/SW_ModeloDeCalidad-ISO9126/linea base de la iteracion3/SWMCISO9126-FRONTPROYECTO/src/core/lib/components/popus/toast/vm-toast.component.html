@@ -1,0 +1,9 @@
+<div class="g-toast__content">
+  <span>
+    <fa-icon [icon]="icon" *ngIf="icon.length > 0"></fa-icon>
+    {{ toastData.text }}
+  </span>
+</div>
+<div class="g-toast__close">
+  <fa-icon [icon]="['fas','times']" (click)="eventClose()"></fa-icon>
+</div>

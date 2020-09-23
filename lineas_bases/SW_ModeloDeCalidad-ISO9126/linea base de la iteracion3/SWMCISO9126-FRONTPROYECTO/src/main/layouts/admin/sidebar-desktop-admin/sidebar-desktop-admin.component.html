@@ -1,0 +1,48 @@
+<div class="g-identity" #identity>
+  <div class="g-identity__logo">
+    <figure class="image is-128x128">
+      <img class="is-rounded" [src]="'assets/img/avatar-sign.png'">
+    </figure>
+  </div>
+</div>
+<ul class="g-sidebar" #sidebar simplebar #simplebar="simplebar">
+  <ng-container *ngIf="newMenus">
+    <li class="g-sidebar__item"
+      *ngFor="let item of newMenus; let i = index; trackBy: trackByFn;"
+      [ngClass]="{
+        'has-dropdown': item.items.length > 0,
+        'open': item.state === 'open'
+      }">
+      <ng-container *ngIf="item.items.length > 0; else whitoutitems">
+        <a class="g-sidebar__item--link"
+          [ngClass]="{ 'has-dropdown': item.items.length > 0 }"
+          (click)="toggle(i)">
+          <fa-icon [icon]="[item.prefixIcon,item.iconName]"></fa-icon>
+          {{ item.name }}
+        </a>
+        <ul class="g-dropdown-items" [@sidebarItemAnimation]="item.state">
+          <li class="g-sidebar__item"
+            *ngFor="let it of item.items; trackBy: trackByFn;">
+            <a class="g-sidebar__item--link"
+              [routerLink]="[it.router]"
+              [routerLinkActive]="['active']">
+              <fa-icon [icon]="[it.prefixIcon,it.iconName]"></fa-icon>
+              {{ it.name }}
+            </a>
+          </li>
+        </ul>
+      </ng-container>
+      <ng-template #whitoutitems>
+        <a class="g-sidebar__item--link"
+          [ngClass]="{ 'has-dropdown': item.items.length > 0 }"
+          (click)="toggle(i)"
+          [routerLink]="[item.router]"
+          [routerLinkActive]="['active']">
+          <!-- [routerLinkActiveOptions]="{exact:true}"> -->
+          <fa-icon [icon]="[item.prefixIcon,item.iconName]"></fa-icon>
+          {{ item.name }}
+        </a>
+      </ng-template>
+    </li>
+  </ng-container>
+</ul>

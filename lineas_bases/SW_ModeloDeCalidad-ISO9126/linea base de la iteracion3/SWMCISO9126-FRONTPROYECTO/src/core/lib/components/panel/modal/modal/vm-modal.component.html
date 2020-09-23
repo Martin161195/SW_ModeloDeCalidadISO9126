@@ -1,0 +1,13 @@
+<div class="g-modal__content"
+  [ngClass]="{
+    'g-modal__content--small': (size === 'small'),
+    'g-modal__content--medium': (size === 'medium'),
+    'g-modal__content--large': (size === 'large')
+  }"
+  [@closeOpenContent]="modalContentAnimation"
+>
+  <ng-content></ng-content>
+  <vm-modal-loader *ngIf="loading">
+    <vm-spinner-material></vm-spinner-material>
+  </vm-modal-loader>
+</div>

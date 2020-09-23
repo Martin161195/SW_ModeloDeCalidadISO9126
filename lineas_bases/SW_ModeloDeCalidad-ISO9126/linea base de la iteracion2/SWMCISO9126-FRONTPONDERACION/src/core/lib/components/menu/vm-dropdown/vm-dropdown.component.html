@@ -1,0 +1,31 @@
+<a
+  [class]="btnThemeClass"
+  [ngClass]="{
+    'g-btn--pill': btnPillClass,
+    'g-btn--onlyicon': isIcon,
+    'g-btn--small': btnSmallClass,
+    'g-btn--onlytext': btnOnlyText
+  }">
+  <span *ngIf="isIcon; else noicon">
+    <fa-icon *ngIf="isIcon; else noicon" [icon]="['fas','ellipsis-h']"></fa-icon>
+  </span>
+  <ng-template #noicon>
+    {{ text }}
+  </ng-template>
+</a>
+<div class="g-dropdown__wrapper">
+  <span
+    class="g-dropdown__arrow"
+    [ngClass]="{
+      'g-dropdown__arrow--right': dropdownAlignRightClass,
+      'g-dropdown__arror--left': dropdownAlignLeftClass
+    }">
+  </span>
+  <div class="g-dropdown__inner">
+    <div class="g-dropdown__body">
+      <div class="g-dropdown__content">
+        <ng-content></ng-content>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,14 @@
+<div class="g-wrapper wrapper-unique">
+  <app-header-admin (eventSidebar)="eventSidebar($event)"></app-header-admin>
+  <div class="g-main">
+    <ng-container *ngIf="sidebarDesktop$ | async as sidebarDesktop">
+      <app-sidebar-desktop-admin *ngIf="sidebarDesktop"></app-sidebar-desktop-admin>
+    </ng-container>
+    <div class="g-main__content">
+      <app-navigation-admin-component></app-navigation-admin-component>
+      <div class="g-main__content--router" simplebar #simplebar="simplebar">
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+  </div>
+</div>

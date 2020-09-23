@@ -1,0 +1,204 @@
+.g-modal
+  position: fixed
+  background: rgba(0, 0, 0, 0.35)
+  top: 0
+  bottom: 0
+  left: 0
+  right: 0
+  display: flex
+  justify-content: center
+  align-items: center
+  z-index: 10000
+
+  .g-modal__content
+    height: 100%
+    width: 100%
+    display: flex
+    flex-direction: column
+    overflow: hidden
+    transition: all 0.4s ease
+    background: $white
+    position: relative
+
+    +is-small
+
+      &.g-modal__content--small
+        width: calc(#{$break-medium} - 126px)
+        height: auto
+        box-shadow: 0 11px 15px -7px rgba(0,0,0,.2), 0 24px 38px 3px rgba(0,0,0,.14), 0 9px 46px 8px rgba(0,0,0,.12)
+
+    +is-medium
+
+      &.g-modal__content--medium
+        width: calc(#{$break-large} - 126px)
+        height: auto
+        box-shadow: 0 11px 15px -7px rgba(0,0,0,.2), 0 24px 38px 3px rgba(0,0,0,.14), 0 9px 46px 8px rgba(0,0,0,.12)
+
+    +is-large
+
+      &.g-modal__content--large
+        width: calc(#{$break-2xlarge} - 126px)
+        height: auto
+        box-shadow: 0 11px 15px -7px rgba(0,0,0,.2), 0 24px 38px 3px rgba(0,0,0,.14), 0 9px 46px 8px rgba(0,0,0,.12)
+
+        .g-table__body
+          height: 300px !important
+
+    .g-modal__loader
+      position: fixed
+      top: 0
+      bottom: 0
+      left: 0
+      right: 0
+      background: $white
+      display: flex
+      align-items: center
+      justify-content: center
+      z-index: 10
+
+    .g-modal__header
+      display: flex
+      flex-direction: row
+      align-items: stretch
+      justify-content: space-between
+      padding: 0 $m-p-size-modal
+      height: 5.1rem
+      position: relative
+      border-bottom: 1px solid $border-color-modal
+
+    .g-modal__footer
+      display: block
+      padding: 1.1rem $m-p-size-modal
+      border-top: 1px solid $border-color-modal
+      margin-top: auto
+
+    .g-modal__body
+      display: block
+      padding: $m-p-size-modal $m-p-size-modal
+      position: relative
+      overflow-x: hidden
+      overflow-y: auto
+      @media print
+        max-height: none !important
+      &::-webkit-scrollbar-track
+        border-radius: 10px
+        background-color: #f5f5f5
+
+      &::-webkit-scrollbar
+        width: 5px
+        background-color: #f5f5f5
+
+      &::-webkit-scrollbar-thumb
+        border-radius: 10px
+        background-color: $primary
+
+      .g-modal__field
+        display: block
+        padding-top: 1.875rem
+        position: relative
+        width: 100%
+
+        &.g-modal__field--detail
+          padding-top: 1rem
+
+        &:first-child
+          margin-top: -2.2rem
+
+      .g-modal__body-form
+        margin-top: -2.2rem
+
+        .columns
+          margin: 0
+
+          .column
+            padding: 0 .75rem
+
+        +mobile
+          >.columns
+            .column
+              padding: 0
+
+        +tablet
+          >.columns
+            .column
+              &:first-child
+                padding-left: 0
+              &:last-child
+                padding-right: 0
+
+      .g-modal__text
+        padding-top: 1.25rem
+
+.g-modal__header
+
+  .g-modal__header-caption
+    display: flex
+    align-items: center
+    align-content: flex-start
+
+    .g-modal__header-title
+      display: flex
+      align-items: center
+
+      .g-modal__header-icon
+        display: flex
+        align-items: center
+        line-height: 0
+        padding: 0 13px 0 0
+        font-size: 16px
+
+      .g-modal__header-text
+        display: flex
+        align-items: center
+        font-size: 1.3rem
+        font-weight: 500
+        margin: 0
+        padding: 0
+
+  .g-modal__header-tools
+    display: flex
+    align-items: center
+    align-content: flex-end
+
+    .g-modal__header-close
+      font-size: 1.5rem
+      font-weight: 700
+      line-height: 1
+      color: black
+      opacity: .5
+      text-shadow: 0 1px 0 #fff
+      cursor: pointer
+
+      &:hover
+        opacity: 1
+
+.g-modal__footer
+
+  .g-modal__footer-buttons
+    display: flex
+    align-items: center
+    justify-content: flex-end
+
+    button, vm-button
+      margin-left: 10px
+
+      &:first-child
+        margin-left: 0
+
+
+.g-detail__entity
+  display: inline-flex
+
+  .g-detail__entity--title
+    font-weight: 500
+    color: $text
+
+  .g-detail__entity--name
+    color: $text-light
+    padding-left: 1rem
+
+    &.g-detail__entity--name-danger
+      color: $danger
+
+    &.g-detail__entity--name-success
+      color: $success

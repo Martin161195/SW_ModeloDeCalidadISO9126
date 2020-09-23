@@ -1,0 +1,120 @@
+<vm-card>
+  <vm-card-body>
+    <div class="g-tab m-b-20">
+      <div class="g-tab__list">
+        <div class="g-tab__list--labels">
+          <div class="g-tab__label is-2" [class.active]="view === 'Inteligibilidad'" (click)="changeView('Inteligibilidad')">
+            Inteligibilidad
+          </div>
+          <div class="g-tab__label is-2" [class.active]="view === 'Aprendizaje'" (click)="changeView('Aprendizaje')">
+            Aprendizaje
+          </div>
+          <div class="g-tab__label is-2" [class.active]="view === 'Operabilidad'" (click)="changeView('Operabilidad')">
+            Operabilidad
+          </div>
+          <div class="g-tab__label is-2" [class.active]="view === 'Proteccion'" (click)="changeView('Proteccion')">
+            Proteccion frente a errores de usuario
+          </div>
+          <!-- <div class="g-tab__label is-2" [class.active]="view === 'Estetica'" (click)="changeView('Estetica')">
+            Estetica
+          </div> -->
+          <div class="g-tab__label is-2" [class.active]="view === 'Accesibilidad'" (click)="changeView('Accesibilidad')">
+            Accesibilidad
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="columns">
+      <div class="column is-flex is-ai-ce">Pondere las subcaracterísticas de calidad del 1 al 9 de acuerdo a la siguiente
+        especificacion:
+      </div>
+      <div class="column">
+        <div class="g-table__default g-table--centered">
+          <table>
+            <thead>
+              <tr>
+                <th>Intensidad</th>
+                <th>Definición</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>Igual Importancia</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Ligera Importancia</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>Moderada Importancia</td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>Más que Moderada</td>
+              </tr>
+              <tr>
+                <td>5</td>
+                <td>Fuerte Importancia</td>
+              </tr>
+              <tr>
+                <td>6</td>
+                <td>Más que fuerte</td>
+              </tr>
+              <tr>
+                <td>7</td>
+                <td>Muy fuerte</td>
+              </tr>
+              <tr>
+                <td>8</td>
+                <td>Muy muy fuerte</td>
+              </tr>
+              <tr>
+                <td>9</td>
+                <td>Extrema Importancia</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <ng-container [ngSwitch]="view">
+      <ng-container *ngSwitchCase="'Inteligibilidad'">
+        <app-inteligibilidad-component [btn]="btnIn" (eBtn)="eBtn($event)"></app-inteligibilidad-component>
+      </ng-container>
+      <ng-container *ngSwitchCase="'Aprendizaje'">
+        <app-aprendizaje-component [btn]="btnAp" (eBtn)="eBtn($event)"></app-aprendizaje-component>
+      </ng-container>
+      <ng-container *ngSwitchCase="'Operabilidad'">
+        <app-operabilidad-component [btn]="btnOp" (eBtn)="eBtn($event)"></app-operabilidad-component>
+      </ng-container>
+      <ng-container *ngSwitchCase="'Proteccion'">
+        <app-proteccion-component [btn]="btnPr" (eBtn)="eBtn($event)"></app-proteccion-component>
+      </ng-container>
+      <!-- <ng-container *ngSwitchCase="'Estetica'">
+        <app-estetica-component [btn]="btnEs" (eBtn)="eBtn($event)"></app-estetica-component>
+      </ng-container> -->
+      <ng-container *ngSwitchCase="'Accesibilidad'">
+        <app-accesibilidad-component [btn]="btnAc" (eBtn)="eBtn($event)"></app-accesibilidad-component>
+      </ng-container>
+    </ng-container>
+  </vm-card-body>
+  <vm-card-footer>
+    <div class="g-card__footer-buttons space-between">
+      <vm-button
+        [btnIsDisabled]="view === 'Inteligibilidad'"
+        [text]="'Atras'"
+        [btnTheme]="'info'"
+        (eventClick)="before()">
+      </vm-button>
+      <vm-button
+        [text]="'Siguiente'"
+        [btnTheme]="'success'"
+        (eventClick)="after()">
+      </vm-button>
+    </div>
+  </vm-card-footer>
+</vm-card>

@@ -1,0 +1,12 @@
+<small class="g-single__bar--label">
+  {{ label }}
+  <span class="g-single__bar--label-units">
+    {{ percent }}%
+  </span>
+</small>
+<div
+  [ngStyle]="{
+    'width': (percent + '%')
+  }"
+  class="g-single__bar--bar"
+></div>

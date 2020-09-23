@@ -1,0 +1,79 @@
+<vm-card>
+  <vm-card-header [title]="'Mis Proyectos'" [icon]="['fas','table']">
+    <vm-dropdown
+      [dropdownAlignRightClass]="true"
+      [dropdownAlignPushClass]="true"
+      [dropdownArrowClass]="true"
+      [btnTheme]="'orange'"
+      [btnPillClass]="true"
+      [isIcon]="true">
+      <ul class="g-nav">
+        <li class="g-nav__section g-nav__section--first">
+          <span class="g-nav__section-text">
+            Acciones
+          </span>
+        </li>
+        <li class="g-nav__item">
+          <a class="g-nav__link">
+            <div class="g-nav__link-icon">
+              <fa-icon [icon]="['far','plus-square']"></fa-icon>
+            </div>
+            <span class="g-nav__link-text">
+              Nuevo Proyecto
+            </span>
+          </a>
+        </li>
+      </ul>
+    </vm-dropdown>
+  </vm-card-header>
+  <vm-card-body>
+    <div class="g-datatable g-datatable--default">
+      <table class="g-table">
+        <thead class="g-table__head">
+          <tr class="g-table__row">
+            <th class="g-table__cell" style="width: auto;">
+              Nombre
+            </th>
+            <th class="g-table__cell" style="width: 200px;">
+              N° de Caracteristicas
+            </th>
+            <th class="g-table__cell" style="width: 200px;">
+              Acciones
+            </th>
+          </tr>
+        </thead>
+        <tbody class="g-table__body" style="height: auto;">
+          <tr class="g-table__row" *ngFor="let item of metricas;">
+            <td class="g-table__cell" style="width: auto;">
+              {{ item.nombre }}
+            </td>
+            <td class="g-table__cell" style="width: 200px;">
+              {{ item.caracteristicas }}
+            </td>
+            <td class="g-table__cell g-table__cell--center" style="width: 200px;">
+              <span class="g-table__action">
+                <a class="accent" vmTooltip="Ver detalle">
+                  <fa-icon [icon]="['far','eye']"></fa-icon>
+                </a>
+                <a class="accent" vmTooltip="Editar">
+                  <fa-icon [icon]="['far','edit']"></fa-icon>
+                </a>
+                <a class="danger" vmTooltip="Eliminar">
+                  <fa-icon [icon]="['far','trash-alt']"></fa-icon>
+                </a>
+              </span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </vm-card-body>
+  <vm-card-footer>
+    <div class="g-card__footer-buttons flex-end">
+      <vm-button
+        [text]="'Descargar'"
+        [btnTheme]="'success'">
+      </vm-button>
+    </div>
+  </vm-card-footer>
+</vm-card>

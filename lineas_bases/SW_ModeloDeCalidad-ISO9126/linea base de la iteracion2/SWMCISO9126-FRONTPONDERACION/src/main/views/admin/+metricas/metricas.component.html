@@ -1,0 +1,49 @@
+<vm-card>
+  <vm-card-header [title]="'Lista De Metricas Priorizadas'"></vm-card-header>
+  <vm-card-body>
+    <div class="g-datatable g-datatable--default">
+      <table class="g-table">
+        <thead class="g-table__head">
+          <tr class="g-table__row">
+            <th class="g-table__cell" style="width: auto;">
+              Métrica
+            </th>
+            <th class="g-table__cell" style="width: 200px;">
+              Subcaracterística
+            </th>
+            <th class="g-table__cell" style="width: 200px;">
+              Peso Absoluto
+            </th>
+            <th class="g-table__cell" style="width: 200px;">
+              Prioridad
+            </th>
+          </tr>
+        </thead>
+        <tbody class="g-table__body" style="height: auto;">
+          <tr class="g-table__row" *ngFor="let item of metricas;">
+            <td class="g-table__cell" style="width: auto;">
+              {{ item.metrica }}
+            </td>
+            <td class="g-table__cell" style="width: 200px;">
+              {{ item.subcaracteristica }}
+            </td>
+            <td class="g-table__cell" style="width: 200px;">
+              {{ item.peso }}
+            </td>
+            <td class="g-table__cell" style="width: 200px;">
+              {{ item.prioridad }}
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </vm-card-body>
+  <vm-card-footer>
+    <div class="g-card__footer-buttons flex-end">
+      <vm-button
+        [text]="'Descargar'"
+        [btnTheme]="'success'">
+      </vm-button>
+    </div>
+  </vm-card-footer>
+</vm-card>

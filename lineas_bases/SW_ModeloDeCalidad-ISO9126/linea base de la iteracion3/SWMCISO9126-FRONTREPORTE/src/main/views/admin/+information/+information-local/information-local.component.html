@@ -1,0 +1,90 @@
+<vm-card>
+  <vm-card-body>
+
+    <div class="columns">
+      <div class="column is-flex is-ai-ce">Pondere las características de calidad del 1 al 9 de acuerdo a la siguiente
+        especificacion:
+      </div>
+      <div class="column">
+        <div class="g-table__default g-table--centered">
+          <table>
+            <thead>
+              <tr>
+                <th>Intensidad</th>
+                <th>Definición</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>Igual Importancia</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Ligera Importancia</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>Moderada Importancia</td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>Más que Moderada</td>
+              </tr>
+              <tr>
+                <td>5</td>
+                <td>Fuerte Importancia</td>
+              </tr>
+              <tr>
+                <td>6</td>
+                <td>Más que fuerte</td>
+              </tr>
+              <tr>
+                <td>7</td>
+                <td>Muy fuerte</td>
+              </tr>
+              <tr>
+                <td>8</td>
+                <td>Muy muy fuerte</td>
+              </tr>
+              <tr>
+                <td>9</td>
+                <td>Extrema Importancia</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <div class="g-table__default g-table--celled g-table--nohover">
+      <table>
+        <thead>
+          <tr>
+            <th>Subcaracterísticas - Usabilidad</th>
+            <ng-container *ngFor="let sub of subcaracteristicas">
+              <th>{{ sub.nombre }}</th>
+            </ng-container>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let sub of subcaracteristicas; let i = index;">
+            <td class="th">{{ sub.nombre }}</td>
+
+            <td *ngFor="let sub of subcaracteristicas; let j = index;" [ngClass]="{'hover': i === j}">
+              <input type="number" [(ngModel)]="values[i][j].valor" (keyup)="changeM(i,j)" [disabled]="i === j">
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+
+  </vm-card-body>
+  <vm-card-footer>
+    <div class="g-card__footer-buttons flex-end">
+      <vm-button [text]="'Siguiente'" [btnTheme]="'success'" (eventClick)="handle()">
+      </vm-button>
+    </div>
+  </vm-card-footer>
+</vm-card>

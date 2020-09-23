@@ -1,0 +1,61 @@
+.g-calendar__card
+  display: flex
+  flex: 1 1 auto
+  position: relative
+  overflow: hidden
+  margin-left: (-$column-gap)
+  margin-right: (-$column-gap)
+  margin-top: (-$column-gap)
+
+  .g-calendar__card-mini
+    min-width: 280px
+    max-width: 280px
+    position: relative
+    overflow: hidden
+    padding: $column-gap
+
+    .g-text__title
+      width: calc(280px - 1.5rem )
+      text-overflow: ellipsis
+      overflow: hidden
+      white-space: nowrap
+
+  .g-calendar__card-big
+    flex-grow: 1
+    overflow: auto
+    padding: $column-gap
+
+.g-calendar__filter
+
+  .g-calendar__filter--title
+    font-size: 0.8rem
+    text-transform: uppercase
+    color: rgba(0,0,0,.6)
+    display: block
+
+  .g-calendar__status
+    display: flex
+    flex-direction: row
+    flex-wrap: wrap
+    align-items: center
+    margin: 4px
+
+    .g-calendar__status--item
+      margin: 4px
+      position: relative
+      overflow: hidden
+      transform: translateZ(0)
+      display: inline-flex
+      border-radius: 50%
+      width: 1.7rem
+      height: 1.7rem
+      cursor: pointer
+      transition: background .5s ease
+      opacity: .5
+
+      &.active
+        opacity: 1
+
+
+
+

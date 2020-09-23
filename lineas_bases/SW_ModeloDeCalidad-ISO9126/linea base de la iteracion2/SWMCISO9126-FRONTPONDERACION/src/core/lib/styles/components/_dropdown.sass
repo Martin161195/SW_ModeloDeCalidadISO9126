@@ -1,0 +1,127 @@
+@keyframes m-dropdown-fade-in
+  0%
+    opacity: 0
+  100%
+    opacity: 1
+
+@keyframes m-dropdown-move-up
+  0%
+    margin-top: 10px
+  100%
+    margin-top: 0px
+
+.g-dropdown
+  position: relative
+
+  .g-dropdown__toggle
+
+    &.g-btn:not(.g-btn--onlyicon):not(.g-btn--onlytext)
+
+      &:after
+        content: ''
+        border: 1px solid
+        border-width: 0 1px 1px 0
+        display: inline-block
+        padding: 3px
+        position: relative
+        transform: rotate(45deg)
+        margin-left: 0.255rem
+        margin-right: 0.255rem
+        margin-bottom: 0.15rem
+
+  .g-dropdown__wrapper
+    top: 100%
+    text-align: left
+    display: none
+    position: absolute
+    z-index: 101
+    padding-top: 0
+    width: 245px
+    border-radius: 4px
+    transform: translateZ(0)
+    backface-visibility: hidden
+
+    .g-dropdown__inner
+      border-radius: 4px
+      background-color: #ffffff
+      box-shadow: 0 2px 4px -1px rgba(0,0,0,.2), 0 4px 5px 0 rgba(0,0,0,.14), 0 1px 10px 0 rgba(0,0,0,.12)
+
+      .g-dropdown__body
+        padding: 20px
+
+        .g-dropdown__content
+          border-radius: 4px
+
+  &.g-dropdown--open, &:hover
+
+    .g-dropdown__wrapper
+      animation: m-dropdown-fade-in .3s ease 1, m-dropdown-move-up .3s ease-out 1
+      display: block
+
+  &.g-dropdown--arrow
+
+    .g-dropdown__wrapper
+      padding-top: 10px
+
+    .g-dropdown__arrow
+      position: absolute
+      line-height: 0
+      display: inline-block
+      overflow: hidden
+      height: 11px
+      width: 40px
+      left: 50%
+      margin-left: -10px
+      top: 0
+      color: #ffffff
+
+      &:before
+        content: ""
+        display: inline-block
+        border-left: 10px solid transparent
+        border-right: 10px solid transparent
+        border-bottom: 10px solid #ffffff
+
+      &.g-dropdown__arrow--right
+        right: -7.5px
+        left: auto
+        margin-left: auto
+
+      &.g-dropdown__arror--left
+        left: 15px
+        margin-left: 0
+
+  &.g-dropdown--align-right
+
+    .g-dropdown__wrapper
+      right: 0
+
+    &.g-dropdown--align-push
+
+      .g-dropdown__wrapper
+        margin-right: -20px
+
+      &.g-dropdown--arrow
+
+        .g-dropdown__arrow
+
+          &.g-dropdown__arrow--right
+            right: 15px
+
+  &.g-dropdown--align-center
+
+    .g-dropdown__wrapper
+      left: 50%
+      width: 245px
+      margin-left: -122.5px
+
+  &.g-dropdown--align-left
+
+    .g-dropdown__wrapper
+      left: 0
+
+    &.g-dropdown--align-push
+
+      .g-dropdown__wrapper
+        margin-left: -20px
+

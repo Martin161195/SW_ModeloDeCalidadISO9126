@@ -1,0 +1,21 @@
+<div class="g-table__default g-table--celled g-table--nohover">
+  <table>
+    <thead>
+      <tr>
+        <th>Subcaracterísticas - Usabilidad</th>
+        <ng-container *ngFor="let sub of subcaracteristicas">
+          <th>{{ sub.nombre }}</th>
+        </ng-container>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let sub of subcaracteristicas; let i = index;">
+        <td class="th">{{ sub.nombre }}</td>
+
+        <td *ngFor="let sub of subcaracteristicas; let j = index;" [ngClass]="{'hover': i === j}">
+          <input type="number" [(ngModel)]="values[i][j].valor" (keyup)="changeM(i,j)" [disabled]="i === j">
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

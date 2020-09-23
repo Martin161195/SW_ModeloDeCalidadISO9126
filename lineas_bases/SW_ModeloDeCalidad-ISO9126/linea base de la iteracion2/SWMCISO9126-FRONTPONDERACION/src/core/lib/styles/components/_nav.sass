@@ -1,0 +1,70 @@
+.g-nav
+  padding: 0
+  margin: 0
+  list-style: none
+
+  .g-nav__section
+    display: table
+    width: 100%
+    vertical-align: middle
+    margin: 25px 0 0 0
+
+    &--first.g-nav__section
+      margin-top: 0
+
+    .g-nav__section-text
+      display: table-cell
+      margin: 0
+      vertical-align: middle
+      font-weight: 600
+      font-size: .8rem
+      text-transform: uppercase
+      color: $orange
+      overflow: hidden
+      white-space: nowrap
+      text-overflow: ellipsis
+      max-width: 205px
+
+  .g-nav__item
+    display: block
+
+    >.g-nav__link
+      display: table
+      table-layout: fixed
+      width: 100%
+      height: 100%
+      text-decoration: none
+      position: relative
+      outline: none !important
+      vertical-align: middle
+      padding: 9px 0
+
+      .g-nav__link-icon
+        display: table-cell
+        height: 100%
+        vertical-align: middle
+        text-align: left
+        width: 35px
+        font-size: 1.4rem
+        line-height: 0
+        color: lighten($orange,0.6)
+
+      .g-nav__link-text
+        display: table-cell
+        height: 100%
+        width: 100%
+        margin: 0
+        padding: 0
+        vertical-align: middle
+        font-size: 1rem
+        color: $text
+
+    &:hover:not(.g-nav__item--disabled)
+
+      >.g-nav__link
+
+        .g-nav__link-icon
+          color: $orange
+
+        .g-nav__link-text
+          color: $orange

@@ -1,0 +1,14 @@
+<select
+  class="select"
+  [disabled]="disabled"
+  [(ngModel)]="value"
+  [compareWith]="compareWith"
+  (blur)="_onBlur()">
+  <option
+    *ngFor="let item of options; trackBy: trackByFn"
+    [ngValue]="item.value"
+    [disabled]="item.disabled">{{ item.text }}</option>
+</select>
+<label class="placeholder">
+  {{ label }}
+</label>
