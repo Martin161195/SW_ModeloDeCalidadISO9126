@@ -1,0 +1,306 @@
+
+$h-box-navigation: 45px
+
+.g-wrapper
+  display: flex
+  flex-direction: column
+  position: absolute
+  bottom: 0
+  left: 0
+  right: 0
+  top: 59px
+
+  .g-navbar
+    position: fixed
+    top: 0
+    left: 0
+    right: 0
+    height: 59px
+    z-index: 10
+    color: white
+    box-shadow: 0 2px 1px -1px rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12)
+    // box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2), 0px 6px 10px 0px rgba(0, 0, 0, 0.14), 0px 1px 18px 0px rgba(0, 0, 0, 0.12)
+
+    .g-navbar__header
+      display: flex
+      flex-wrap: wrap
+      align-items: center
+      padding: 8px 16px
+      background-color: lighten($primary, 6%)
+
+      .flex-spacer
+        flex-grow: 1
+
+  .g-main
+    display: flex
+    flex: 1 1 auto
+    position: relative
+    overflow: hidden
+    z-index: 1
+
+    .g-main__sidebar
+      min-width: 220px
+      max-width: 220px
+      position: relative
+      overflow: hidden
+      background: lighten($primary,6%)
+
+      .g-identity
+        display: flex
+        flex-wrap: nowrap
+        flex-direction: column
+        box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2), 0px 6px 10px 0px rgba(0, 0, 0, 0.14), 0px 1px 18px 0px rgba(0, 0, 0, 0.12)
+
+        .g-identity__logo,
+        .g-identity__name
+          padding: .75rem 1rem
+          color: $white
+
+        .g-identity__logo
+
+          .image
+            margin: auto
+
+      .g-sidebar
+        list-style: none
+        display: flex
+        flex-wrap: nowrap
+        flex-direction: column
+        padding: 0
+
+        .g-sidebar__item
+          position: relative
+          margin: 0
+          transition: background .3s ease-in-out
+
+          &.has-dropdown
+
+            &.open
+              background: $primary
+
+              .g-sidebar__item--link
+                &.has-dropdown
+                  &:before
+                    transform: rotate(-90deg)
+
+          .g-sidebar__item--link
+            display: block
+            padding: .75rem 1rem
+            text-decoration: none
+            color: $white
+            cursor: pointer
+            position: relative
+
+            fa-icon
+              color: $white
+              margin-right: .5rem
+
+              svg
+                width: 20px
+
+            &.active
+              background: $primary
+              color: $orange
+              fa-icon
+                color: $orange
+
+            &:hover
+              background: $primary
+              color: $white
+
+              fa-icon
+                color: $white
+
+              &.has-dropdown
+
+                &:before
+                  background-image: url(data:image/svg+xml;charset=utf8;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHZpZXdCb3g9JzAgMCAxMSAxNCc+PHBhdGggZmlsbD0nI2ZmZicgZD0nTTkuMTQ4IDIuMzUybC00LjE0OCA0LjE0OCA0LjE0OCA0LjE0OHEwLjE0OCAwLjE0OCAwLjE0OCAwLjM1MnQtMC4xNDggMC4zNTJsLTEuMjk3IDEuMjk3cS0wLjE0OCAwLjE0OC0wLjM1MiAwLjE0OHQtMC4zNTItMC4xNDhsLTUuNzk3LTUuNzk3cS0wLjE0OC0wLjE0OC0wLjE0OC0wLjM1MnQwLjE0OC0wLjM1Mmw1Ljc5Ny01Ljc5N3EwLjE0OC0wLjE0OCAwLjM1Mi0wLjE0OHQwLjM1MiAwLjE0OGwxLjI5NyAxLjI5N3EwLjE0OCAwLjE0OCAwLjE0OCAwLjM1MnQtMC4xNDggMC4zNTJ6Jy8+PC9zdmc+)
+
+            &.has-dropdown
+
+              &:before
+                position: absolute
+                top: 50%
+                right: 1rem
+                display: block
+                width: 8px
+                height: 8px
+                padding: 0
+                margin-top: -4px
+                content: ""
+                background-image: url(data:image/svg+xml;charset=utf8;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHZpZXdCb3g9JzAgMCAxMSAxNCc+PHBhdGggZmlsbD0nIzczODE4ZicgZD0nTTkuMTQ4IDIuMzUybC00LjE0OCA0LjE0OCA0LjE0OCA0LjE0OHEwLjE0OCAwLjE0OCAwLjE0OCAwLjM1MnQtMC4xNDggMC4zNTJsLTEuMjk3IDEuMjk3cS0wLjE0OCAwLjE0OC0wLjM1MiAwLjE0OHQtMC4zNTItMC4xNDhsLTUuNzk3LTUuNzk3cS0wLjE0OC0wLjE0OC0wLjE0OC0wLjM1MnQwLjE0OC0wLjM1Mmw1Ljc5Ny01Ljc5N3EwLjE0OC0wLjE0OCAwLjM1Mi0wLjE0OHQwLjM1MiAwLjE0OGwxLjI5NyAxLjI5N3EwLjE0OCAwLjE0OCAwLjE0OCAwLjM1MnQtMC4xNDggMC4zNTJ6Jy8+PC9zdmc+)
+                background-repeat: no-repeat
+                background-position: center
+                transition: transform .3s,-webkit-transform .3s
+
+
+
+    .g-main__sidebar--backdrop
+      position: absolute
+      left: 0
+      bottom: 0
+      right: 0
+      top: 0
+      background: grey
+      display: none
+
+    .g-main__content
+      flex-grow: 1
+      overflow: hidden
+
+      .g-main__content--navigation
+        height: $h-box-navigation
+        background: $white
+        position: relative
+        display: block
+        z-index: 1000
+
+        .g-navigation--container
+          position: absolute
+          left: 0
+          right: 0
+          top: 0
+          bottom: 0
+          display: flex
+          align-items: center
+          justify-content: space-between
+          box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 3px 1px -2px rgba(0, 0, 0, 0.12)
+
+          .g-navigation--icon
+            height: $h-box-navigation
+            width: $h-box-navigation
+            display: flex
+            align-items: center
+            justify-content: center
+            cursor: pointer
+
+            &.br
+              border-right: 1px solid grey
+
+            &.bl
+              border-left: 1px solid grey
+
+
+
+          .g-navigation--container__breadcrumb
+            display: flex
+            align-items: center
+
+            .g-navigation--breadcrumb
+              padding: 8px 16px
+
+              nav
+                font-size: .875rem
+                font-weight: $weight-normal
+                display: block
+                margin: 0
+                letter-spacing: 0.01071em
+                color: rgba(0, 0, 0, 0.54)
+
+                ol
+                  margin: 0
+                  display: flex
+                  padding: 0
+                  flex-wrap: wrap
+                  align-items: center
+
+                  li
+                    list-style: none
+
+                    &.separator
+                      display: flex
+                      user-select: none
+                      margin-left: 8px
+                      margin-right: 8px
+
+                    a
+                      text-decoration: none
+                      display: inline
+                      color: inherit
+                      margin: 0
+
+                      &:hover
+                        text-decoration: underline
+
+                    p
+                      color: rgba(0, 0, 0, 0.87)
+
+            .g-navigation-container--tab
+
+              .g-navigation--tab
+                display: flex
+                flex-grow: 1
+                overflow: hidden
+                background: inherit
+
+                .g-navigation--tab__list
+                  width: 100%
+                  flex-grow: 1
+                  position: relative
+
+                  .g-navigation--tab__list--labels
+                    display: flex
+
+              .g-navigation--tab__label
+                height: $h-box-navigation
+                cursor: pointer
+                box-sizing: border-box
+                text-align: center
+                display: inline-flex
+                justify-content: center
+                align-items: center
+                white-space: nowrap
+                outline: 0
+                position: relative
+                color: rgba(0,0,0,.6)
+                padding: 0 1rem
+                transition: background .5s ease
+                width: 100%
+                font-size: 0.8rem
+
+                &:hover
+                  background-color: rgba(63,81,181,.1)
+
+                &.active
+                  border-bottom: 2px solid $orange
+                  color: $orange
+
+      .g-main__content--router
+        // margin-top: 1px
+        padding: 1.5rem 1rem
+        background: $background-page
+        overflow: auto
+        // height: calc(100% - ($h-box-navigation - 1px))
+        height: calc(100% - 45px)
+
+        // &::-webkit-scrollbar-track
+        //   border-radius: 10px
+        //   background-color: #f5f5f5
+
+        // &::-webkit-scrollbar
+        //   width: 5px
+        //   background-color: #f5f5f5
+
+        // &::-webkit-scrollbar-thumb
+        //   border-radius: 10px
+        //   background-color: $primary
+
+
+// Simplebar
+// simplebar resetea el z-index y cuando se abre un modal ocurre un error con el navigation
+.simplebar-mask
+  z-index: inherit
+
+.simplebar-offset
+  // right: 0 !important
+
+.point-table-module
+  font-size: 3rem !important
+  text-align: center
+  margin-bottom: 2rem
+  line-height: 0
+
+.guion-table-module
+  font-size: 2rem !important
+  text-align: center
+  line-height: 0

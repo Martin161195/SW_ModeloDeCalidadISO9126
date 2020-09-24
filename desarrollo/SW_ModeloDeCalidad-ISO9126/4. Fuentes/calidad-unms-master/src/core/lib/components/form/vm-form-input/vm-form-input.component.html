@@ -1,0 +1,18 @@
+<div class="flex">
+  <input
+    #nativeInput
+    class="input"
+    [(ngModel)]="value"
+    [attr.type]="type"
+    [disabled]="disabled"
+    (blur)="_onBlur()"
+    autocomplete="false"
+    placeholder=""
+  >
+  <label class="placeholder">
+    {{ label }}&nbsp;
+  </label>
+  <div class="alter-text">
+    {{ alter }}
+  </div>
+</div>

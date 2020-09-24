@@ -1,0 +1,87 @@
+.g-pv__container--modal
+  padding-top: calc(1.25rem + 10px)
+
+  .item
+    display: block
+    border: 1px solid $text-light
+    padding: 1rem
+    border-radius: .5rem
+
+.g-pv__container--table
+  overflow: auto
+  min-height: 190px
+
+  table
+    font-size: .9rem
+    width: 100%
+
+    thead
+      tr
+        th
+          vertical-align: middle
+          padding: .5rem .75rem
+          border: 1px solid $color-pv-border-item
+          border-width: 0 0 1px
+          text-align: left
+          color: $text-light
+
+    tbody
+      tr
+        td,th
+          vertical-align: middle
+          padding: .5rem .75rem
+          border: 1px solid $color-pv-border-item
+          border-width: 0 0 1px
+          text-align: left
+
+        td
+          color: $text-light
+
+          a
+            color: #575962
+            transition: .3s all
+
+            &.danger
+              &:hover
+                color: $danger
+
+        &.delete
+
+          td,th
+            text-decoration-line: line-through
+            opacity: .35
+
+        &:hover
+          background: #f7f6fa
+
+.g-pv__summary
+  display: flex
+  flex-grow: 1
+  overflow: hidden
+  background: inherit
+
+  .g-pv__summary--list
+    width: 100%
+    flex-grow: 1
+    position: relative
+    border-bottom: 1px solid rgba(0,0,0,.12)
+    border-top: 1px solid rgba(0,0,0,.12)
+
+    .g-pv__summary--list-labels
+      display: flex
+
+      .g-pv__summary--list-label
+        padding: 0.5rem 0.75rem
+        text-align: center
+        color: $text-light
+        font-size: 0.9rem
+
+        h1
+          font-weight: bold
+
+        &.is-4
+          width: 33.33%
+
+        &.is-3
+          width: 25%
+

@@ -1,0 +1,21 @@
+<div
+  class="g-drop__zone-perfil"
+  [ngClass]="otherClass"
+  (enter)="enter($event)"
+  (fileUpload)="getImages($event)"
+  VMDropFiles>
+  <figure class="image is-160x160" [class.g-drop__zone-perfil--enter]="enterBox">
+    <ng-container *ngIf="file else notfile">
+      <img class="is-rounded" [src]="file.url">
+    </ng-container>
+    <ng-template #notfile>
+      <img class="is-rounded" [src]="image || 'assets/img/avatar-sign.png'">
+    </ng-template>
+  </figure>
+  <div class="g-drop__zone-input" *ngIf="!disabled">
+    <span class="g-btn g-btn--primary btn-file">
+      <span>Cambiar foto</span>
+      <input multiple="" name="files[]" type="file">
+    </span>
+  </div>
+</div>

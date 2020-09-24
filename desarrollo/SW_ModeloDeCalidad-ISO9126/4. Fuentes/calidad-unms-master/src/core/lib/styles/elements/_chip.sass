@@ -1,0 +1,117 @@
+.g-chip__list-wrapper
+  display: flex
+  flex-direction: row
+  flex-wrap: wrap
+  align-items: center
+  margin: -4px
+
+  .g-chip__standar
+    margin: 4px
+
+.g-chip
+  position: relative
+  overflow: hidden
+  box-sizing: border-box
+  transform: translateZ(0)
+  font-size: 0.875rem
+  transition: box-shadow 280ms cubic-bezier(.4,0,.2,1)
+  display: inline-flex
+  padding: 7px 12px
+  border-radius: 16px
+  align-items: center
+  cursor: default
+  min-height: 2rem
+  height: 1px
+  line-height: 1.25rem
+
+  &.g-chip--whit-icon
+    padding-top: 7px
+    padding-bottom: 7px
+    padding-right: 8px
+    padding-left: 12px
+
+    .g-chip__icon
+      padding-left: 3px
+      cursor: pointer
+      opacity: .4
+
+      &:hover
+        opacity: .54
+
+  &.g-chip--primary
+    background-color: $primary
+    color: $white
+
+    &:hover
+      background: darken($primary,6%)
+
+  &.g-chip--secondary,
+  .g-chip--default
+    background-color: $default
+    color: $text
+
+    &:hover
+      background: darken($default,6%)
+
+  &.g-chip--accent
+    background-color: $accent
+    color: $white
+
+    &:hover
+      background: darken($accent,6%)
+
+  &.g-chip--danger
+    background-color: $danger
+    color: $white
+
+    &:hover
+      background: darken($danger,6%)
+
+  &.g-chip--dark
+    background-color: $dark
+    color: $white
+
+    &:hover
+      background: darken($dark,6%)
+
+  &.g-chip--info
+    background-color: $info
+    color: $white
+
+    &:hover
+      background: darken($info,6%)
+
+  &.g-chip--metal
+    background-color: $metal
+    color: $white
+
+    &:hover
+      background: darken($metal,6%)
+
+  &.g-chip--orange
+    background-color: $orange
+    color: $white
+
+    &:hover
+      background: darken($orange,6%)
+
+  &.g-chip--purple
+    background-color: $purple
+    color: $white
+
+    &:hover
+      background: darken($purple,6%)
+
+  &.g-chip--success
+    background-color: $success
+    color: $white
+
+    &:hover
+      background: darken($success,6%)
+
+  &.g-chip--yellow
+    background-color: $yellow
+    color: $white
+
+    &:hover
+      background: darken($yellow,6%)
